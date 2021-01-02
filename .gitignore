@@ -33,12 +33,6 @@ gfx/pokemon/*/frames.asm
 baserom.txt
 pokecrystal.txt
 
-# roms
-*.gbc
-*.gb
-*.bin
-*.isx
-
 # save game files
 *.sgm
 *.sav
