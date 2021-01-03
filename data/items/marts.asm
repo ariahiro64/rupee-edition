@@ -145,7 +145,7 @@ MartGoldenrod5F:
 	db TM_STEEL_WING
 	db TM_ROLLOUT
 	db TM_ROCK_SMASH
-	db TM_DREAM_EATER
+	db TM_PSYCHIC_M
 	db TM_THIEF
 	db -1 ; end
 
@@ -329,7 +329,7 @@ MartCeladon3F:
 	db TM_STEEL_WING
 	db TM_ROLLOUT
 	db TM_ROCK_SMASH
-	db TM_DREAM_EATER
+	db TM_PSYCHIC_M
 	db TM_THIEF
 	db -1 ; end
 
