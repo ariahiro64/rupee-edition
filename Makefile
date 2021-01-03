@@ -1,4 +1,4 @@
-roms := pokecrystal.gbc pokecrystal11.gbc pokecrystal-au.gbc pokecrystal-debug.gbc pokecrystal11-debug.gbc
+roms := rupee.gbc rupee11.gbc rupee-au.gbc rupee-debug.gbc rupee11-debug.gbc
 
 crystal_obj := \
 audio.o \
@@ -47,11 +47,11 @@ RGBLINK ?= $(RGBDS)rgblink
 .SECONDARY:
 
 all: crystal
-crystal:         pokecrystal.gbc
-crystal11:       pokecrystal11.gbc
-crystal-au:      pokecrystal-au.gbc
-crystal-debug:   pokecrystal-debug.gbc
-crystal11-debug: pokecrystal11-debug.gbc
+crystal:         rupee.gbc
+crystal11:       rupee11.gbc
+crystal-au:      rupee-au.gbc
+crystal-debug:   rupee-debug.gbc
+crystal11-debug: rupee11-debug.gbc
 
 clean:
 	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(crystal_au_obj) $(crystal_debug_obj) $(crystal11_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
@@ -108,24 +108,24 @@ $(foreach obj, $(crystal11_debug_obj), $(eval $(call DEP,$(obj),$(obj:11_debug.o
 endif
 
 
-pokecrystal.gbc: $(crystal_obj) layout.link
-	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l layout.link -p 0 -o $@ $(crystal_obj)
+rupee.gbc: $(crystal_obj) layout.link
+	$(RGBLINK) -n rupee.sym -m rupee.map -l layout.link -p 0 -o $@ $(crystal_obj)
 	$(RGBFIX) -Cjv -t PM_CRYSTAL -i BYTE -k 01 -l 0x33 -m 0x10 -r 3 -p 0 $@
 
-pokecrystal11.gbc: $(crystal11_obj) layout.link
-	$(RGBLINK) -n pokecrystal11.sym -m pokecrystal11.map -l layout.link -p 0 -o $@ $(crystal11_obj)
+rupee11.gbc: $(crystal11_obj) layout.link
+	$(RGBLINK) -n rupee11.sym -m rupee11.map -l layout.link -p 0 -o $@ $(crystal11_obj)
 	$(RGBFIX) -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0 $@
 
-pokecrystal-au.gbc: $(crystal_au_obj) layout.link
-	$(RGBLINK) -n pokecrystal-au.sym -m pokecrystal-au.map -l layout.link -p 0 -o $@ $(crystal_au_obj)
+rupee-au.gbc: $(crystal_au_obj) layout.link
+	$(RGBLINK) -n rupee-au.sym -m rupee-au.map -l layout.link -p 0 -o $@ $(crystal_au_obj)
 	$(RGBFIX) -Cjv -t PM_CRYSTAL -i BYTU -k 01 -l 0x33 -m 0x10 -r 3 -p 0 $@
 
-pokecrystal-debug.gbc: $(crystal_debug_obj) layout.link
-	$(RGBLINK) -n pokecrystal-debug.sym -m pokecrystal-debug.map -l layout.link -p 0 -o $@ $(crystal_debug_obj)
+rupee-debug.gbc: $(crystal_debug_obj) layout.link
+	$(RGBLINK) -n rupee-debug.sym -m rupee-debug.map -l layout.link -p 0 -o $@ $(crystal_debug_obj)
 	$(RGBFIX) -Cjv -t PM_CRYSTAL -i BYTE -k 01 -l 0x33 -m 0x10 -r 3 -p 0 $@
 
-pokecrystal11-debug.gbc: $(crystal11_debug_obj) layout.link
-	$(RGBLINK) -n pokecrystal11-debug.sym -m pokecrystal11-debug.map -l layout.link -p 0 -o $@ $(crystal11_debug_obj)
+rupee11-debug.gbc: $(crystal11_debug_obj) layout.link
+	$(RGBLINK) -n rupee11-debug.sym -m rupee11-debug.map -l layout.link -p 0 -o $@ $(crystal11_debug_obj)
 	$(RGBFIX) -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0 $@
 
 
