@@ -366,6 +366,9 @@ RaichuEvosAttacks:
 	db 1, TAIL_WHIP
 	db 1, QUICK_ATTACK
 	db 1, THUNDERBOLT
+	db 26, PETAL_DANCE
+	db 41, THUNDER
+	db 50, ZAP_CANNON
 	db 0 ; no more level-up moves
 
 SandshrewEvosAttacks:
@@ -545,7 +548,7 @@ ZubatEvosAttacks:
 	db 0 ; no more level-up moves
 
 GolbatEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
+	db EVOLVE_LEVEL, 30, CROBAT
 	db 0 ; no more evolutions
 	db 1, SCREECH
 	db 1, LEECH_LIFE
@@ -1533,7 +1536,7 @@ RhydonEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChanseyEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
+	db EVOLVE_LEVEL, 30, BLISSEY
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 5, GROWL
@@ -1765,8 +1768,9 @@ MagikarpEvosAttacks:
 GyaradosEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THRASH
+	db 15, DRAGON_RAGE
 	db 20, BITE
-	db 25, DRAGON_RAGE
+	db 25, DRAGONBREATH
 	db 30, LEER
 	db 35, TWISTER
 	db 40, HYDRO_PUMP
@@ -1798,8 +1802,8 @@ EeveeEvosAttacks:
 	db EVOLVE_ITEM, THUNDERSTONE, JOLTEON
 	db EVOLVE_ITEM, WATER_STONE, VAPOREON
 	db EVOLVE_ITEM, FIRE_STONE, FLAREON
-	db EVOLVE_HAPPINESS, TR_MORNDAY, ESPEON
-	db EVOLVE_HAPPINESS, TR_NITE, UMBREON
+	db EVOLVE_ITEM, SUN_STONE, ESPEON
+	db EVOLVE_ITEM, MOON_STONE, UMBREON
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
@@ -1954,6 +1958,7 @@ ArticunoEvosAttacks:
 	db 1, POWDER_SNOW
 	db 13, MIST
 	db 25, AGILITY
+	db 30, GROWTH
 	db 37, MIND_READER
 	db 49, ICE_BEAM
 	db 61, REFLECT
@@ -1966,6 +1971,7 @@ ZapdosEvosAttacks:
 	db 1, THUNDERSHOCK
 	db 13, THUNDER_WAVE
 	db 25, AGILITY
+	db 30, THUNDERBOLT
 	db 37, DETECT
 	db 49, DRILL_PECK
 	db 61, LIGHT_SCREEN
@@ -1977,6 +1983,7 @@ MoltresEvosAttacks:
 	db 1, WING_ATTACK
 	db 1, EMBER
 	db 13, FIRE_SPIN
+	db 20, SACRED_FIRE
 	db 25, AGILITY
 	db 37, ENDURE
 	db 49, FLAMETHROWER
@@ -1990,8 +1997,9 @@ DratiniEvosAttacks:
 	db 1, WRAP
 	db 1, LEER
 	db 8, THUNDER_WAVE
+	db 10, DRAGON_RAGE
 	db 15, TWISTER
-	db 22, DRAGON_RAGE
+	db 22, GROWTH
 	db 29, SLAM
 	db 36, AGILITY
 	db 43, SAFEGUARD
@@ -2007,9 +2015,11 @@ DragonairEvosAttacks:
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
+	db 10, DRAGON_RAGE
 	db 15, TWISTER
-	db 22, DRAGON_RAGE
+	db 22, GROWTH
 	db 29, SLAM
+	db 35, GROWTH
 	db 38, AGILITY
 	db 47, SAFEGUARD
 	db 56, OUTRAGE
@@ -2023,9 +2033,11 @@ DragoniteEvosAttacks:
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
+	db 10, DRAGON_RAGE
 	db 15, TWISTER
-	db 22, DRAGON_RAGE
+	db 22, GROWTH
 	db 29, SLAM
+	db 35, SHARPEN
 	db 38, AGILITY
 	db 47, SAFEGUARD
 	db 55, WING_ATTACK
@@ -2037,6 +2049,7 @@ MewtwoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, CONFUSION
 	db 1, DISABLE
+	db 1, SUBMISSION
 	db 11, BARRIER
 	db 22, SWIFT
 	db 33, PSYCH_UP
@@ -2348,42 +2361,46 @@ LanturnEvosAttacks:
 	db 0 ; no more level-up moves
 
 PichuEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, PIKACHU
+	db EVOLVE_LEVEL, 15, PIKACHU
 	db 0 ; no more evolutions
 	db 1, THUNDERSHOCK
 	db 1, CHARM
 	db 6, TAIL_WHIP
 	db 8, THUNDER_WAVE
-	db 11, SWEET_KISS
+	db 10, SWEET_KISS
+	db 11, LOVELY_KISS
 	db 0 ; no more level-up moves
 
 CleffaEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
+	db EVOLVE_LEVEL, 13, CLEFAIRY
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 1, CHARM
 	db 4, ENCORE
 	db 8, SING
-	db 13, SWEET_KISS
+	db 10, SWEET_KISS
+	db 13, LOVELY_KISS
 	db 0 ; no more level-up moves
 
 IgglybuffEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, JIGGLYPUFF
+	db EVOLVE_LEVEL, 15, JIGGLYPUFF
 	db 0 ; no more evolutions
 	db 1, SING
 	db 1, CHARM
 	db 4, DEFENSE_CURL
 	db 9, POUND
 	db 14, SWEET_KISS
+	db 15, LOVELY_KISS
 	db 0 ; no more level-up moves
 
 TogepiEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, TOGETIC
+	db EVOLVE_LEVEL, 20, TOGETIC
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, CHARM
 	db 7, METRONOME
 	db 18, SWEET_KISS
+	db 20, LOVELY_KISS
 	db 25, ENCORE
 	db 31, SAFEGUARD
 	db 38, DOUBLE_EDGE
@@ -2569,6 +2586,7 @@ JumpluffEvosAttacks:
 	db 22, LEECH_SEED
 	db 33, COTTON_SPORE
 	db 44, MEGA_DRAIN
+	db 50, PETAL_DANCE
 	db 0 ; no more level-up moves
 
 AipomEvosAttacks:
@@ -2648,6 +2666,7 @@ EspeonEvosAttacks:
 	db 1, TACKLE
 	db 1, TAIL_WHIP
 	db 8, SAND_ATTACK
+	db 10, BITE
 	db 16, CONFUSION
 	db 23, QUICK_ATTACK
 	db 30, SWIFT
@@ -3250,7 +3269,7 @@ EnteiEvosAttacks:
 	db 1, LEER
 	db 11, EMBER
 	db 21, ROAR
-	db 31, FIRE_SPIN
+	db 31, SACRED_FIRE
 	db 41, STOMP
 	db 51, FLAMETHROWER
 	db 61, SWAGGER
@@ -3277,6 +3296,7 @@ LarvitarEvosAttacks:
 	db 1, LEER
 	db 8, SANDSTORM
 	db 15, SCREECH
+	db 20, FAINT_ATTACK
 	db 22, ROCK_SLIDE
 	db 29, THRASH
 	db 36, SCARY_FACE
@@ -3294,6 +3314,7 @@ PupitarEvosAttacks:
 	db 1, SCREECH
 	db 8, SANDSTORM
 	db 15, SCREECH
+	db 20, FAINT_ATTACK
 	db 22, ROCK_SLIDE
 	db 29, THRASH
 	db 38, SCARY_FACE
@@ -3310,6 +3331,7 @@ TyranitarEvosAttacks:
 	db 1, SCREECH
 	db 8, SANDSTORM
 	db 15, SCREECH
+	db 20, FAINT_ATTACK
 	db 22, ROCK_SLIDE
 	db 29, THRASH
 	db 38, SCARY_FACE
@@ -3323,6 +3345,7 @@ LugiaEvosAttacks:
 	db 1, AEROBLAST
 	db 11, SAFEGUARD
 	db 22, GUST
+	db 25, AEROBLAST
 	db 33, RECOVER
 	db 44, HYDRO_PUMP
 	db 55, RAIN_DANCE
@@ -3337,6 +3360,7 @@ HoOhEvosAttacks:
 	db 1, SACRED_FIRE
 	db 11, SAFEGUARD
 	db 22, GUST
+	db 25, SACRED_FIRE
 	db 33, RECOVER
 	db 44, FIRE_BLAST
 	db 55, SUNNY_DAY
@@ -3352,6 +3376,7 @@ CelebiEvosAttacks:
 	db 1, CONFUSION
 	db 1, RECOVER
 	db 1, HEAL_BELL
+	db 1, GROWTH
 	db 10, SAFEGUARD
 	db 20, ANCIENTPOWER
 	db 30, FUTURE_SIGHT
