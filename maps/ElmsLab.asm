@@ -160,8 +160,8 @@ CyndaquilPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic CHARMANDER
-	cry CHARMANDER
+	pokepic CLEFFA
+	cry CLEFFA
 	waitbutton
 	closepokepic
 	opentext
@@ -173,12 +173,12 @@ CyndaquilPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, CHARMANDER
+	getmonname STRING_BUFFER_3, CLEFFA
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke CHARMANDER, 5, BERRY
+	givepoke CLEFFA, 5, FOCUS_BAND
 	closetext
 	readvar VAR_FACING
 	ifequal RIGHT, ElmDirectionsScript
@@ -190,8 +190,8 @@ TotodilePokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic SQUIRTLE
-	cry SQUIRTLE
+	pokepic EEVEE
+	cry EEVEE
 	waitbutton
 	closepokepic
 	opentext
@@ -203,12 +203,12 @@ TotodilePokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, SQUIRTLE
+	getmonname STRING_BUFFER_3, EEVEE
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke SQUIRTLE, 5, BERRY
+	givepoke EEVEE, 5, FOCUS_BAND
 	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	sjump ElmDirectionsScript
@@ -218,8 +218,8 @@ ChikoritaPokeBallScript:
 	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
-	pokepic BULBASAUR
-	cry BULBASAUR
+	pokepic PICHU
+	cry PICHU
 	waitbutton
 	closepokepic
 	opentext
@@ -231,12 +231,12 @@ ChikoritaPokeBallScript:
 	writetext ChoseStarterText
 	promptbutton
 	waitsfx
-	getmonname STRING_BUFFER_3, BULBASAUR
+	getmonname STRING_BUFFER_3, PICHU
 	writetext ReceivedStarterText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke BULBASAUR, 5, BERRY
+	givepoke PICHU, 5, FOCUS_BAND
 	closetext
 	applymovement PLAYER, AfterChikoritaMovement
 	sjump ElmDirectionsScript
@@ -858,20 +858,20 @@ LabWhereGoingText:
 
 TakeCyndaquilText:
 	text "ELM: You'll take"
-	line "CHARMANDER, the"
-	cont "fire #MON?"
+	line "CLEFFA, the"
+	cont "lucky #MON?"
 	done
 
 TakeTotodileText:
 	text "ELM: Do you want"
-	line "SQUIRTLE, the"
-	cont "water #MON?"
+	line "EEVEE, the"
+	cont "transform #MON?"
 	done
 
 TakeChikoritaText:
 	text "ELM: So, you like"
-	line "BULBASAUR, the"
-	cont "grass #MON?"
+	line "PICHU, the"
+	cont "joltic #MON?"
 	done
 
 DidntChooseStarterText:

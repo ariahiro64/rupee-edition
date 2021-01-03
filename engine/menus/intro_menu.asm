@@ -717,7 +717,7 @@ OakSpeech:
 ; force pokemon into the players inventory
 	xor a
 	ld [wMonType], a
-	ld a, CROCONAW
+	ld a, UMBREON
 	ld [wCurPartySpecies], a
 	ld a, 20
 	ld [wCurPartyLevel], a
@@ -725,99 +725,48 @@ OakSpeech:
 
 	xor a
 	ld [wMonType], a
-	ld a, QUILAVA
+	ld a, ESPEON
 	ld [wCurPartySpecies], a
 	ld a, 20
 	ld [wCurPartyLevel], a
 	predef TryAddMonToParty
 
-	xor a
-	ld [wMonType], a
-	ld a, BAYLEEF
-	ld [wCurPartySpecies], a
-	ld a, 20
-	ld [wCurPartyLevel], a
-	predef TryAddMonToParty
-
-	xor a
-	ld [wMonType], a
-	ld a, RAICHU
-	ld [wCurPartySpecies], a
-	ld a, 20
-	ld [wCurPartyLevel], a
-	predef TryAddMonToParty
 ; moves
-	ld a, ICE_BEAM
+	ld a, HYPNOSIS
 	ld [wPartyMon1Moves], a
-	ld a, ICE_PUNCH
+	ld a, PURSUIT
 	ld [wPartyMon1Moves + 1], a
-	ld a, SURF
+	ld a, DREAM_EATER
 	ld [wPartyMon1Moves + 2], a
-	ld a, HYDRO_PUMP
+	ld a, TAIL_WHIP
 	ld [wPartyMon1Moves + 3], a
 
-	ld a, FIRE_BLAST
+	ld a, HYPNOSIS
 	ld [wPartyMon2Moves], a
-	ld a, FLAMETHROWER
+	ld a, GROWTH
 	ld [wPartyMon2Moves + 1], a
-	ld a, THUNDERPUNCH
+	ld a, CONFUSION
 	ld [wPartyMon2Moves + 2], a
-	ld a, ROCK_SMASH
+	ld a, BATON_PASS
 	ld [wPartyMon2Moves + 3], a
-
-	ld a, SOLARBEAM
-	ld [wPartyMon3Moves], a
-	ld a, SYNTHESIS
-	ld [wPartyMon3Moves + 1], a
-	ld a, BODY_SLAM
-	ld [wPartyMon3Moves + 2], a
-	ld a, FLAIL
-	ld [wPartyMon3Moves + 3], a
-
-	ld a, THUNDER
-	ld [wPartyMon4Moves], a
-	ld a, THUNDERBOLT
-	ld [wPartyMon4Moves + 1], a
-	ld a, THUNDER_WAVE
-	ld [wPartyMon4Moves + 2], a
-	ld a, SURF
-	ld [wPartyMon4Moves + 3], a
 ; Power points
-	ld a, 10
+	ld a, 20
 	ld [wPartyMon1PP], a
-	ld a, 15
+	ld a, 20
 	ld [wPartyMon1PP + 1], a
 	ld a, 15
 	ld [wPartyMon1PP + 2], a
-	ld a, 5
+	ld a, 30
 	ld [wPartyMon1PP + 3], a
 
-	ld a, 5
-	ld [wPartyMon2PP], a
-	ld a, 15
-	ld [wPartyMon2PP + 1], a
-	ld a, 15
-	ld [wPartyMon2PP + 2], a
-	ld a, 15
-	ld [wPartyMon2PP + 3], a
-
-	ld a, 10
-	ld [wPartyMon3PP], a
-	ld a, 5
-	ld [wPartyMon3PP + 1], a
-	ld a, 15
-	ld [wPartyMon3PP + 2], a
-	ld a, 15
-	ld [wPartyMon3PP + 3], a
-
-	ld a, 10
-	ld [wPartyMon4PP], a
-	ld a, 15
-	ld [wPartyMon4PP + 1], a
 	ld a, 20
-	ld [wPartyMon4PP + 2], a
-	ld a, 15
-	ld [wPartyMon4PP + 3], a
+	ld [wPartyMon2PP], a
+	ld a, 40
+	ld [wPartyMon2PP + 1], a
+	ld a, 25
+	ld [wPartyMon2PP + 2], a
+	ld a, 40
+	ld [wPartyMon2PP + 3], a
 
 	ret
 	
