@@ -12,7 +12,25 @@ OaksLab_MapScripts:
 .DummyScene:
 	end
 
+	
+
 Oak:
+	checkevent EVENT_BEAT_ELITE_FOUR
+	iffalse .cancel
+	faceplayer
+	checkevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	iftrue .cancel
+	opentext
+	writetext OaksLabGSBallText
+	waitbutton
+	verbosegiveitem GS_BALL
+	setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
+	writetext OaksLabGSBallText2
+	waitbutton
+	closetext
+	end
+.cancel 
 	faceplayer
 	opentext
 	checkevent EVENT_OPENED_MT_SILVER
@@ -22,6 +40,7 @@ Oak:
 	writetext OakWelcomeKantoText
 	promptbutton
 	setevent EVENT_TALKED_TO_OAK_IN_KANTO
+	end
 .CheckBadges:
 	readvar VAR_BADGES
 	ifequal NUM_BADGES, .OpenMtSilver
@@ -76,6 +95,30 @@ OaksLabTrashcan:
 
 OaksLabPC:
 	jumptext OaksLabPCText
+
+OaksLabGSBallText:
+	text "Oh hello <PLAYER>!"
+
+	para "Glad to see you!"
+
+	para "Have you seen Kurt?"
+	line "He's been studying"
+	cont "Celebi for years"
+	cont "and I believe"
+	cont "I found it."
+
+	para "Please give him"
+	cont "the GS Ball"
+	cont "when you can."
+	done
+
+OaksLabGSBallText2:
+	text "He's a valued"
+	line "colleague who"
+	cont "has worked with"
+	cont "me on Celebi for"
+	cont "many years."
+	done
 
 OakWelcomeKantoText:
 	text "OAK: Ah, <PLAY_G>!"
