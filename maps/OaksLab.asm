@@ -101,14 +101,14 @@ OaksLabGSBallText:
 
 	para "Glad to see you!"
 
-	para "Have you seen Kurt?"
+	para "How's Kurt?"
 	line "He's been studying"
 	cont "Celebi for years"
 	cont "and I believe"
 	cont "I found it."
 
 	para "Please give him"
-	cont "the GS Ball"
+	line "the GS Ball"
 	cont "when you can."
 	done
 
