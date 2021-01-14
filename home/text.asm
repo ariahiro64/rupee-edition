@@ -141,12 +141,15 @@ RadioTerminator::
 
 PrintText::
 	call SetUpTextbox
+	; fallthrough
+
 BuenaPrintText::
 	push hl
 	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
 	call ClearBox
 	pop hl
+	; fallthrough
 
 PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
@@ -163,6 +166,7 @@ SetUpTextbox::
 
 PlaceString::
 	push hl
+	; fallthrough
 
 PlaceNextChar::
 	ld a, [de]
@@ -173,7 +177,9 @@ PlaceNextChar::
 	pop hl
 	ret
 
-	pop de ; unused
+DummyChar:: ; unreferenced
+	pop de
+	; fallthrough
 
 NextChar::
 	inc de
@@ -181,22 +187,24 @@ NextChar::
 
 CheckDict::
 dict: MACRO
-if \1 == "<NULL>"
+if \1 == 0
 	and a
 else
 	cp \1
 endc
 
-if STRSUB("\2", 1, 1) == "\""
+if ISCONST(\2)
 ; Replace a character with another one
 	jr nz, ._\@
 	ld a, \2
 ._\@:
-elif STRSUB("\2", 1, 1) == "."
-; Locals can use a short jump
-	jr z, \2
 else
+	if STRSUB("\2", 1, 1) == "."
+	; Locals can use a short jump
+	jr z, \2
+	else
 	jp z, \2
+	endc
 endc
 ENDM
 
@@ -240,7 +248,7 @@ ENDM
 	dict "ﾞ",         .place ; should be .diacritic
 	jr .not_diacritic
 
-.diacritic
+.diacritic ; unreferenced
 	ld b, a
 	call Diacritic
 	jp NextChar
@@ -248,18 +256,19 @@ ENDM
 .not_diacritic
 	cp FIRST_REGULAR_TEXT_CHAR
 	jr nc, .place
-
+; dakuten or handakuten
 	cp "パ"
 	jr nc, .handakuten
-
-.dakuten
+; dakuten
 	cp FIRST_HIRAGANA_DAKUTEN_CHAR
 	jr nc, .hiragana_dakuten
+; katakana dakuten
 	add "カ" - "ガ"
-	jr .katakana_dakuten
+	jr .place_dakuten
+
 .hiragana_dakuten
 	add "か" - "が"
-.katakana_dakuten
+.place_dakuten
 	ld b, "ﾞ" ; dakuten
 	call Diacritic
 	jr .place
@@ -267,11 +276,13 @@ ENDM
 .handakuten
 	cp "ぱ"
 	jr nc, .hiragana_handakuten
+; katakana handakuten
 	add "ハ" - "パ"
-	jr .katakana_handakuten
+	jr .place_handakuten
+
 .hiragana_handakuten
 	add "は" - "ぱ"
-.katakana_handakuten
+.place_handakuten
 	ld b, "ﾟ" ; handakuten
 	call Diacritic
 
@@ -314,12 +325,13 @@ PlaceKokoWa:  print_name PlaceKokoWaText
 PlaceMoveTargetsName::
 	ldh a, [hBattleTurn]
 	xor 1
-	jr PlaceMoveUsersName.place
+	jr PlaceBattlersName
 
 PlaceMoveUsersName::
 	ldh a, [hBattleTurn]
+	; fallthrough
 
-.place:
+PlaceBattlersName:
 	push de
 	and a
 	jr nz, .enemy
@@ -628,7 +640,7 @@ UnloadBlinkingCursor::
 	ldcoord_a 18, 17
 	ret
 
-FarString::
+PlaceFarString::
 	ld b, a
 	ldh a, [hROMBank]
 	push af
@@ -696,7 +708,7 @@ TextCommands::
 	dw TextCommand_PROMPT_BUTTON ; TX_PROMPT_BUTTON
 	dw TextCommand_SCROLL        ; TX_SCROLL
 	dw TextCommand_START_ASM     ; TX_START_ASM
-	dw TextCommand_NUM           ; TX_NUM
+	dw TextCommand_DECIMAL       ; TX_DECIMAL
 	dw TextCommand_PAUSE         ; TX_PAUSE
 	dw TextCommand_SOUND         ; TX_SOUND_DEX_FANFARE_50_79
 	dw TextCommand_DOTS          ; TX_DOTS
@@ -849,8 +861,8 @@ TextCommand_START_ASM::
 	ld [hl], a
 	ret
 
-TextCommand_NUM::
-; print a number
+TextCommand_DECIMAL::
+; print a decimal number
 	ld a, [hli]
 	ld e, a
 	ld a, [hli]
