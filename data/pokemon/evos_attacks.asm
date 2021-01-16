@@ -1447,7 +1447,15 @@ MarowakEvosAttacks:
 HitmonleeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, DOUBLE_KICK
+	db 1, ROCK_SLIDE
+	db 1, MIND_READER
+	db 1, MEDITATE
+	db 1, MACH_PUNCH
+	db 1, HI_JUMP_KICK
+	db 1, RAPID_SPIN
+	db 1, AGILITY
 	db 6, MEDITATE
+	db 10, ROCK_SLIDE
 	db 11, ROLLING_KICK
 	db 16, JUMP_KICK
 	db 21, FOCUS_ENERGY
@@ -1462,7 +1470,15 @@ HitmonleeEvosAttacks:
 HitmonchanEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, COMET_PUNCH
+	db 1, ROCK_SLIDE
+	db 1, MEDITATE
+	db 1, HI_JUMP_KICK
+	db 1, MACH_PUNCH
+	db 1, MIND_READER
+	db 1, RAPID_SPIN
+	db 1, AGILITY
 	db 7, AGILITY
+	db 10, ROCK_SLIDE
 	db 13, PURSUIT
 	db 26, THUNDERPUNCH
 	db 26, ICE_PUNCH
@@ -2003,6 +2019,14 @@ DratiniEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
+	db 1, EXTREMESPEED
+	db 1, HYDRO_PUMP
+	db 1, BUBBLEBEAM
+	db 1, WATER_GUN
+	db 1, HAZE
+	db 1, MIST
+	db 1, SUPERSONIC
+	db 1, HORN_DRILL
 	db 8, THUNDER_WAVE
 	db 10, DRAGON_RAGE
 	db 15, TWISTER
@@ -2010,8 +2034,10 @@ DratiniEvosAttacks:
 	db 29, SLAM
 	db 36, AGILITY
 	db 43, SAFEGUARD
+	db 47, WING_ATTACK
 	db 50, OUTRAGE
 	db 57, HYPER_BEAM
+	db 60, STEEL_WING
 	db 0 ; no more level-up moves
 
 DragonairEvosAttacks:
@@ -2019,6 +2045,14 @@ DragonairEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
+	db 1, EXTREMESPEED
+	db 1, HYDRO_PUMP
+	db 1, BUBBLEBEAM
+	db 1, WATER_GUN
+	db 1, HAZE
+	db 1, MIST
+	db 1, SUPERSONIC
+	db 1, HORN_DRILL
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
@@ -2029,7 +2063,9 @@ DragonairEvosAttacks:
 	db 35, GROWTH
 	db 38, AGILITY
 	db 47, SAFEGUARD
+	db 50, WING_ATTACK
 	db 56, OUTRAGE
+	db 61, STEEL_WING
 	db 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
@@ -2037,6 +2073,14 @@ DragoniteEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WRAP
 	db 1, LEER
+	db 1, EXTREMESPEED
+	db 1, HYDRO_PUMP
+	db 1, BUBBLEBEAM
+	db 1, WATER_GUN
+	db 1, HAZE
+	db 1, MIST
+	db 1, SUPERSONIC
+	db 1, HORN_DRILL
 	db 1, THUNDER_WAVE
 	db 1, TWISTER
 	db 8, THUNDER_WAVE
@@ -3181,12 +3225,26 @@ TyrogueEvosAttacks:
 	db EVOLVE_STAT, 20, ATK_EQ_DEF, HITMONTOP
 	db 0 ; no more evolutions
 	db 1, TACKLE
+	db 1, AGILITY
+	db 1, MEDITATE
+	db 1, ROCK_SLIDE
+	db 1, HI_JUMP_KICK
+	db 1, MACH_PUNCH
+	db 1, MIND_READER
+	db 1, RAPID_SPIN
 	db 0 ; no more level-up moves
 
 HitmontopEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROLLING_KICK
+	db 1, ROCK_SLIDE
+	db 1, MIND_READER
+	db 1, MACH_PUNCH
+	db 1, HI_JUMP_KICK
+	db 1, MEDITATE
+	db 1, AGILITY
 	db 7, FOCUS_ENERGY
+	db 10, ROCK_SLIDE
 	db 13, PURSUIT
 	db 19, QUICK_ATTACK
 	db 25, RAPID_SPIN

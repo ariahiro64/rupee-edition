@@ -70,8 +70,8 @@ GiveDratini:
 
 .Movesets:
 .Moveset0:
-; Dratini does not normally learn Extremespeed. This is a special gift.
-	db WRAP
+; Dratini does not normally learn Extremespeed/Wing Attack. This is a special gift.
+	db WING_ATTACK
 	db THUNDER_WAVE
 	db TWISTER
 	db EXTREMESPEED
