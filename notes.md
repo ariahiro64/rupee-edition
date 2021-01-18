@@ -8,6 +8,10 @@ Flippers (Surf): Teru-Sama (90)
 *Wind Waker (Whirlpool): Teru-Sama (120)
 *Waterfall (Mermaid Scale): Teru-Sama ()
 
+Custom Held Item IDs:
+
+Wide Lens (Accuracy boosting held item): Teru-Sama (179)/ITEM_B3
+
 Debug Save:
 QUILAVA lv20
 CROCONAW lv20

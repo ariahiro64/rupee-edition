@@ -191,7 +191,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_B0
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
-	dw NoEffect            ; ITEM_B3
+	dw NoEffect            ; WIDE_LENS
 	
 
 PokeBallEffect:

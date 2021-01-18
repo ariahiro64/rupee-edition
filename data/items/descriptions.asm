@@ -178,7 +178,7 @@ ItemDescriptions:
 	dw TeruSama23Desc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw TeruSama24Desc
+	dw WideLensDesc
 	dw BrickPieceDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -941,8 +941,9 @@ RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
 
-TeruSama24Desc:
-	db   "?@"
+WideLensDesc:
+	db   "Raises accuracy"
+	next "for moves. (HOLD)@"
 
 BrickPieceDesc:
 	db   "A rare chunk of"

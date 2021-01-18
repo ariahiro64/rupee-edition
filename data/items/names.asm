@@ -177,7 +177,7 @@ ItemNames::
 	db "TERU-SAMA@"
 	db "PARK BALL@"
 	db "RAINBOW WING@"
-	db "TERU-SAMA@"
+	db "WIDE LENS@"
 	db "BRICK PIECE@"
 	db "SURF MAIL@"
 	db "LITEBLUEMAIL@"
