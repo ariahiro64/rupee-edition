@@ -44,7 +44,7 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw ParagliderDesc
+	dw ClothDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
@@ -134,17 +134,17 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw TeruSama9Desc
-	dw MermaidScaleDesc
+	dw FeatherDesc
+	dw ZoraScaleDesc
 	dw HammerDesc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw ScopeLensDesc
-	dw TeruSama12Desc
-	dw TeruSama13Desc
+	dw BraceletDesc
+	dw ShieldDesc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw TeruSama14Desc
+	dw NecklaceDesc
 	dw LeftoversDesc
 	dw TeruSama15Desc
 	dw TeruSama16Desc
@@ -178,7 +178,7 @@ ItemDescriptions:
 	dw TeruSama23Desc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw WideLensDesc
+	dw TruthLensDesc
 	dw BrickPieceDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -780,8 +780,9 @@ PassDesc:
 	db   "A ticket for the"
 	next "MAGNET TRAIN.@"
 
-TeruSama9Desc:
-	db   "?@"
+FeatherDesc:
+	db   "Raises Speed"
+	next "for moves. (HOLD)@"
 
 TeruSama10Desc:
 	db   "?@"
@@ -801,11 +802,13 @@ ScopeLensDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
 
-TeruSama12Desc:
-	db   "?@"
+BraceletDesc:
+	db   "Raises power"
+	next "of ATTACK. (HOLD)@"
 
-TeruSama13Desc:
-	db   "?@"
+ShieldDesc:
+	db   "Raises your"
+	next "DEFENSE. (HOLD)@"
 
 MetalCoatDesc:
 	db   "Powers up steel-"
@@ -815,8 +818,9 @@ DragonFangDesc:
 	db   "Powers up dragon-"
 	next "type moves. (HOLD)@"
 
-TeruSama14Desc:
-	db   "?@"
+NecklaceDesc:
+	db   "Raises happi-"
+	next "ness. (HOLD)@"
 
 LeftoversDesc:
 	db   "Restores HP during"
@@ -941,7 +945,7 @@ RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
 
-WideLensDesc:
+TruthLensDesc:
 	db   "Raises accuracy"
 	next "for moves. (HOLD)@"
 
@@ -1012,7 +1016,7 @@ TeruSama32Desc:
 TeruSama33Desc:
 	db   "?@"
 
-ParagliderDesc:
+ClothDesc:
 	db	"Allows you to"
 	next "fly like a kite!@"
 
@@ -1032,6 +1036,6 @@ WindWakerDesc:
 	db   "A baton that casts"
 	next "whirlpools!@"
 
-MermaidScaleDesc:
+ZoraScaleDesc:
 	db   "Climb waterfalls"
 	next "like a Zora!@"

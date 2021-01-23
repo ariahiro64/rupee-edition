@@ -777,10 +777,10 @@ OakSpeech:
 	db LANTERN
 	;db HAMMER requires non existant badge
 	db FLIPPERS
-	;db MERMAID_SCALE doesnt work
+	;db ZORA_SCALE doesnt work
 	db WIND_WAKER
 	db GAUNTLETS
-	;db PARAGLIDER this is currently broken
+	;db Cloth this is currently broken
 	db -1 ;end of list
 .list_end
 

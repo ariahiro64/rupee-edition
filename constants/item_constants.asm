@@ -50,7 +50,7 @@
 	const SUPER_REPEL  ; 2a
 	const MAX_REPEL    ; 2b
 	const DIRE_HIT     ; 2c
-	const PARAGLIDER   ; 2d
+	const CLOTH        ; 2d
 	const FRESH_WATER  ; 2e
 	const SODA_POP     ; 2f
 	const LEMONADE     ; 30
@@ -140,17 +140,17 @@
 	const STAR_PIECE   ; 84
 	const BASEMENT_KEY ; 85
 	const PASS         ; 86
-	const ITEM_87	   ; 87
+	const FEATHER	   ; 87
 	const HAMMER       ; 88
-	const MERMAID_SCALE ; 89
+	const ZORA_SCALE   ; 89
 	const CHARCOAL     ; 8a
 	const BERRY_JUICE  ; 8b
 	const SCOPE_LENS   ; 8c
-	const ITEM_8D      ; 8d
-	const ITEM_8E      ; 8e
+	const BRACELET     ; 8d
+	const SHIELD       ; 8e
 	const METAL_COAT   ; 8f
 	const DRAGON_FANG  ; 90
-	const ITEM_91      ; 91
+	const NECKLACE     ; 91
 	const LEFTOVERS    ; 92
 	const ITEM_93      ; 93
 	const ITEM_94      ; 94
@@ -184,7 +184,7 @@
 	const ITEM_B0      ; b0
 	const PARK_BALL    ; b1
 	const RAINBOW_WING ; b2
-	const WIDE_LENS    ; b3
+	const TRUTH_LENS   ; b3
 	const BRICK_PIECE  ; b4
 	const SURF_MAIL    ; b5
 	const LITEBLUEMAIL ; b6

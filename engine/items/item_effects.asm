@@ -57,7 +57,7 @@ ItemEffects:
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw ParagliderEffect    ; PARAGLIDER
+	dw ClothEffect    	   ; CLOTH
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
@@ -147,17 +147,17 @@ ItemEffects:
 	dw NoEffect            ; STAR_PIECE
 	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
-	dw NoEffect			   ; ITEM_87
+	dw NoEffect			   ; FEATHER
+	dw ZoraScaleEffect     ; ZORA_SCALE
 	dw HammerEffect        ; HAMMER
-	dw MermaidScaleEffect  ; ITEM_89
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
-	dw NoEffect            ; SCOPE_LENS
-	dw NoEffect            ; ITEM_8D
-	dw NoEffect            ; ITEM_8E
+	dw NoEffect            ; HAWKEYE
+	dw NoEffect            ; BRACELET
+	dw NoEffect            ; SHIELD
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
-	dw NoEffect            ; ITEM_91
+	dw NoEffect            ; NECKLACE
 	dw NoEffect            ; LEFTOVERS
 	dw NoEffect            ; ITEM_93
 	dw NoEffect            ; ITEM_94
@@ -191,7 +191,7 @@ ItemEffects:
 	dw NoEffect            ; ITEM_B0
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
-	dw NoEffect            ; WIDE_LENS
+	dw NoEffect            ; TRUTH_LENS
 	
 
 PokeBallEffect:
@@ -2936,7 +2936,7 @@ FlippersEffect:
 	farcall SurfFunction
 	ret
 
-ParagliderEffect:
+ClothEffect:
 	ld a, 1
 	ld [wUsingHMItem], a
 	farcall FlyFunction
@@ -2960,7 +2960,7 @@ WindWakerEffect:
 	farcall WhirlpoolFunction
 	ret
 
-MermaidScaleEffect:
+ZoraScaleEffect:
 	ld a, 1
 	ld [wUsingHMItem], a
 	farcall WaterfallFunction

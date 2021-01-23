@@ -59,7 +59,7 @@ MAIL_STRUCT_LENGTH EQU $2f ; mailmsg struct
 	const_def
 	const HELD_NONE
 	const HELD_BERRY
-	const HELD_2
+	const HELD_HAPPINESS
 	const HELD_LEFTOVERS
 	const_skip
 	const HELD_5

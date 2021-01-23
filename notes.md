@@ -1,16 +1,22 @@
 HM Key Item IDs:
 Sword (Cut): Teru-Sama (25)
 Flippers (Surf): Teru-Sama (90)
-*Paraglider (Fly): Teru-Sama (6)
-*Gauntlets (Strength): Teru-Sama (45)
-*Hammer (Rock Smash): Teru-Sama (50)
-*Deku Nuts (Flash): Teru-Sama (100)
-*Wind Waker (Whirlpool): Teru-Sama (120)
-*Waterfall (Mermaid Scale): Teru-Sama ()
+Cloth (Fly): Teru-Sama (45)
+Gauntlets (Strength): Teru-Sama (50)
+*Hammer (Rock Smash): Teru-Sama (137)
+Lantern (Flash): Teru-Sama (100)
+Wind Waker (Whirlpool): Teru-Sama (120)
+*Zora Scale (Waterfall): Teru-Sama (136)
 
 Custom Held Item IDs:
 
-Wide Lens (Accuracy boosting held item): Teru-Sama (179)/ITEM_B3
+Lens Of Truth aka Truth Lens (Accuracy boosting held item): Teru-Sama (179)/ITEM_B3
+Feather (Speed Increasing Held Item): Teru-Sama (136)/ITEM_87
+Mogma Mitts (Escape Rope): Teru-Sama (19)/ITEM_13
+Hawkeye (Scope_Lens)
+Bracelet (Attack boosting held item): Teru-Sama (141)/ITEM_8D
+Fairies/Great Fairies (Revives)
+Necklace (Friendship boosting held item): Teru-Sama (145)/ITEM_91
 
 Debug Save:
 QUILAVA lv20
