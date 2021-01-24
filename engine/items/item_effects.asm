@@ -159,7 +159,7 @@ ItemEffects:
 	dw NoEffect            ; DRAGON_FANG
 	dw NoEffect            ; NECKLACE
 	dw NoEffect            ; LEFTOVERS
-	dw NoEffect            ; ITEM_93
+	dw NoEffect            ; EVIOLITE
 	dw NoEffect            ; ITEM_94
 	dw NoEffect            ; ITEM_95
 	dw RestorePPEffect     ; MYSTERYBERRY

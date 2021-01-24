@@ -17,6 +17,7 @@ Hawkeye (Scope_Lens)
 Bracelet (Attack boosting held item): Teru-Sama (141)/ITEM_8D
 Fairies/Great Fairies (Revives)
 Necklace (Friendship boosting held item): Teru-Sama (145)/ITEM_91
+Eviolite (Held Item that Boosts Defenses): Teru-Sama (147)/ITEM_93
 
 Debug Save:
 QUILAVA lv20

@@ -146,7 +146,7 @@ ItemDescriptions:
 	dw DragonFangDesc
 	dw NecklaceDesc
 	dw LeftoversDesc
-	dw TeruSama15Desc
+	dw EvioliteDesc
 	dw TeruSama16Desc
 	dw TeruSama17Desc
 	dw MysteryBerryDesc
@@ -826,8 +826,9 @@ LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
-TeruSama15Desc:
-	db   "?@"
+EvioliteDesc:
+	db   "Raises DEFENSES of"
+	next "Unevos. (HOLD)@"
 
 TeruSama16Desc:
 	db   "?@"
