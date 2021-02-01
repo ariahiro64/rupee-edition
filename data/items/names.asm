@@ -145,7 +145,7 @@ ItemNames::
 	db "DRAGON FANG@"
 	db "NECKLACE@"
 	db "LEFTOVERS@"
-	db "EVIOLITE@"
+	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "TERU-SAMA@"
 	db "MYSTERYBERRY@"

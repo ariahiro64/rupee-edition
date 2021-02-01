@@ -57,7 +57,7 @@ ItemEffects:
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw ClothEffect    	   ; CLOTH
+	dw ParagliderEffect    ; PARAGLIDER
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
@@ -159,7 +159,7 @@ ItemEffects:
 	dw NoEffect            ; DRAGON_FANG
 	dw NoEffect            ; NECKLACE
 	dw NoEffect            ; LEFTOVERS
-	dw NoEffect            ; EVIOLITE
+	dw NoEffect            ; ITEM_93
 	dw NoEffect            ; ITEM_94
 	dw NoEffect            ; ITEM_95
 	dw RestorePPEffect     ; MYSTERYBERRY
@@ -2936,7 +2936,7 @@ FlippersEffect:
 	farcall SurfFunction
 	ret
 
-ClothEffect:
+ParagliderEffect:
 	ld a, 1
 	ld [wUsingHMItem], a
 	farcall FlyFunction

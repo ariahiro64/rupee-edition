@@ -780,7 +780,7 @@ OakSpeech:
 	;db ZORA_SCALE doesnt work
 	db WIND_WAKER
 	db GAUNTLETS
-	;db Cloth this is currently broken
+	;db CLOTH this is currently broken
 	db -1 ;end of list
 .list_end
 

@@ -50,7 +50,7 @@
 	const SUPER_REPEL  ; 2a
 	const MAX_REPEL    ; 2b
 	const DIRE_HIT     ; 2c
-	const CLOTH        ; 2d
+	const PARAGLIDER   ; 2d
 	const FRESH_WATER  ; 2e
 	const SODA_POP     ; 2f
 	const LEMONADE     ; 30
@@ -152,7 +152,7 @@
 	const DRAGON_FANG  ; 90
 	const NECKLACE     ; 91
 	const LEFTOVERS    ; 92
-	const EVIOLITE     ; 93
+	const ITEM_93      ; 93
 	const ITEM_94      ; 94
 	const ITEM_95      ; 95
 	const MYSTERYBERRY ; 96

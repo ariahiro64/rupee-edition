@@ -2562,57 +2562,26 @@ DittoMetalPowder:
 	rr c
 	ret
 
-BattleCommand_DamageStats:
-; damagestats
-
-	ldh a, [hBattleTurn]
-	and a
-	jp nz, EnemyAttackDamage
-
-	; fallthrough
-
-UnevolvedEviolite:
-; get the defender's species
+DragonairShield:
 	ld a, MON_SPECIES
 	call BattlePartyAttr
 	ldh a, [hBattleTurn]
 	and a
 	ld a, [hl]
-	jr nz, .got_species
+	jr nz, .Dragonair
 	ld a, [wTempEnemyMonSpecies]
 
-.got_species
-; check if the defender has any evolutions
-; hl := EvosAttacksPointers + (species - 1) * 2
-	dec a
-	push hl
-	push bc
-	ld c, a
-	ld b, 0
-	ld hl, EvosAttacksPointers
-	add hl, bc
-	add hl, bc
-; hl := the species' entry from EvosAttacksPointers
-	ld a, BANK(EvosAttacksPointers)
-	call GetFarHalfword
-; a := the first byte of the species' *EvosAttacks data
-	ld a, BANK("Evolutions and Attacks")
-	call GetFarByte
-; if a == 0, there are no evolutions, so don't boost stats
-	and a
-	pop bc
-	pop hl
-	ret z
+.Dragonair:
+	cp DRAGONAIR
+	ret nz
 
-; check if the defender's item is Eviolite
 	push bc
 	call GetOpponentItem
-	ld a, b
-	cp HELD_EVIOLITE
+	ld a, [hl]
+	cp SHIELD
 	pop bc
 	ret nz
 
-; boost the relevant defense stat in bc by 50%
 	ld a, c
 	srl a
 	add c
@@ -2628,6 +2597,15 @@ UnevolvedEviolite:
 	scf
 	rr c
 	ret
+
+BattleCommand_DamageStats:
+; damagestats
+
+	ldh a, [hBattleTurn]
+	and a
+	jp nz, EnemyAttackDamage
+
+	; fallthrough
 
 PlayerAttackDamage:
 ; Return move power d, player level e, enemy defense c and player attack b.
@@ -2706,7 +2684,7 @@ PlayerAttackDamage:
 	ld a, [wBattleMonLevel]
 	ld e, a
 	call DittoMetalPowder
-	call UnevolvedEviolite
+	call DragonairShield
 
 	ld a, 1
 	and a
@@ -2945,7 +2923,8 @@ EnemyAttackDamage:
 
 	ld a, [wEnemyMonLevel]
 	ld e, a
-	call UnevolvedEviolite
+	call DittoMetalPowder
+	call DragonairShield
 
 	ld a, 1
 	and a

@@ -44,7 +44,7 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw ClothDesc
+	dw ParagliderDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
@@ -146,7 +146,7 @@ ItemDescriptions:
 	dw DragonFangDesc
 	dw NecklaceDesc
 	dw LeftoversDesc
-	dw EvioliteDesc
+	dw TeruSama15Desc
 	dw TeruSama16Desc
 	dw TeruSama17Desc
 	dw MysteryBerryDesc
@@ -393,7 +393,7 @@ LeafStoneDesc:
 
 MetalPowderDesc:
 	db   "Raises DEFENSE of"
-	next "DITTO. (HOLD)@"
+	next "#MON. (HOLD)@"
 
 NuggetDesc:
 	db   "Made of pure gold."
@@ -826,9 +826,8 @@ LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
-EvioliteDesc:
-	db   "Raises DEFENSES of"
-	next "Unevos. (HOLD)@"
+TeruSama15Desc:
+	db   "?@"
 
 TeruSama16Desc:
 	db   "?@"
@@ -1017,7 +1016,7 @@ TeruSama32Desc:
 TeruSama33Desc:
 	db   "?@"
 
-ClothDesc:
+ParagliderDesc:
 	db	"Allows you to"
 	next "fly like a kite!@"
 
