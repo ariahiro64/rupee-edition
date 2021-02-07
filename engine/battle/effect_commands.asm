@@ -2562,26 +2562,48 @@ DittoMetalPowder:
 	rr c
 	ret
 
-DragonairShield:
+PokemonShield:
+; get the defender's species
 	ld a, MON_SPECIES
 	call BattlePartyAttr
 	ldh a, [hBattleTurn]
 	and a
 	ld a, [hl]
-	jr nz, .Dragonair
+	jr nz, .got_species
 	ld a, [wTempEnemyMonSpecies]
 
-.Dragonair:
-	cp DRAGONAIR
-	ret nz
+.got_species
+; check if the defender has any evolutions
+; hl := EvosAttacksPointers + (species - 1) * 2
+	dec a
+	push hl
+	push bc
+	ld c, a
+	ld b, 0
+	ld hl, EvosAttacksPointers
+	add hl, bc
+	add hl, bc
+; hl := the species' entry from EvosAttacksPointers
+	ld a, BANK(EvosAttacksPointers)
+	call GetFarHalfword
+; a := the first byte of the species' *EvosAttacks data
+	ld a, BANK("Evolutions and Attacks")
+	call GetFarByte
+; if a == 0, there are no evolutions, so don't boost stats
+	and a
+	pop bc
+	pop hl
+	ret z
 
+; check if the defender's item is Shield
 	push bc
 	call GetOpponentItem
-	ld a, [hl]
-	cp SHIELD
+	ld a, b
+	cp HELD_SHIELD
 	pop bc
 	ret nz
 
+; boost the relevant defense stat in bc by 50%
 	ld a, c
 	srl a
 	add c
@@ -2593,6 +2615,66 @@ DragonairShield:
 	and a
 	jr nz, .done
 	inc b
+
+.done
+	scf
+	rr c
+	ret
+
+PokemonBracelet:
+; get the attacker's species
+	ld a, MON_SPECIES
+	call BattlePartyAttr
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [hl]
+	jr nz, .got_species
+	ld a, [wTempEnemyMonSpecies]
+
+.got_species
+; check if the attacker has any evolutions
+; hl := EvosAttacksPointers + (species - 1) * 2
+	dec a
+	push hl
+	push bc
+	ld c, a
+	ld b, 0
+	ld hl, EvosAttacksPointers
+	add hl, bc
+	add hl, bc
+; hl := the species' entry from EvosAttacksPointers
+	ld a, BANK(EvosAttacksPointers)
+	call GetFarHalfword
+; a := the first byte of the species' *EvosAttacks data
+	ld a, BANK("Evolutions and Attacks")
+	call GetFarByte
+; if a == 0, there are no evolutions, so don't boost stats
+	and a
+	pop bc
+	pop hl
+	ret z
+
+; check if the attacker's item is Bracelet
+	push bc
+	call GetOpponentItem
+	ld a, b
+	cp HELD_BRACELET
+	pop bc
+	ret nz
+
+; boost the relevant attack stat in bc by 50%
+	ld a, c
+	sla a
+	add c
+	ld c, a
+	ret nc
+
+	sla b
+	ld a, b
+	and a
+	jr nz, .done
+	inc b
+
 .done
 	scf
 	rr c
@@ -2684,7 +2766,8 @@ PlayerAttackDamage:
 	ld a, [wBattleMonLevel]
 	ld e, a
 	call DittoMetalPowder
-	call DragonairShield
+	call PokemonShield
+	call PokemonBracelet
 
 	ld a, 1
 	and a
@@ -2784,13 +2867,14 @@ CheckDamageStatsCritical:
 ThickClubBoost:
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is Cubone or Marowak and
+; If the attacking monster is Cubone, Marowak, or Kangaskhan and
 ; it's holding a Thick Club, double it.
 	push bc
 	push de
 	ld b, CUBONE
 	ld c, MAROWAK
-	ld d, THICK_CLUB
+	ld d, KANGASKHAN
+	ld e, THICK_CLUB
 	call SpeciesItemBoost
 	pop de
 	pop bc
@@ -2799,13 +2883,14 @@ ThickClubBoost:
 LightBallBoost:
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is Pikachu and it's
+; If the attacking monster is Pichu, Pikachu, or Raichu and it's
 ; holding a Light Ball, double it.
 	push bc
 	push de
-	ld b, PIKACHU
+	ld b, PICHU
 	ld c, PIKACHU
-	ld d, LIGHT_BALL
+	ld d, RAICHU
+	ld e, LIGHT_BALL
 	call SpeciesItemBoost
 	pop de
 	pop bc
@@ -2814,8 +2899,8 @@ LightBallBoost:
 SpeciesItemBoost:
 ; Return in hl the stat value at hl.
 
-; If the attacking monster is species b or c and
-; it's holding item d, double it.
+; If the attacking monster is species b, c, or d and
+; it's holding item e, double it.
 
 	ld a, [hli]
 	ld l, [hl]
@@ -2836,6 +2921,8 @@ SpeciesItemBoost:
 	cp b
 	jr z, .GetItemHeldEffect
 	cp c
+	jr z, .GetItemHeldEffect
+	cp d
 	ret nz
 
 .GetItemHeldEffect:
@@ -2843,7 +2930,7 @@ SpeciesItemBoost:
 	call GetUserItem
 	ld a, [hl]
 	pop hl
-	cp d
+	cp e
 	ret nz
 
 ; Double the stat
@@ -2924,7 +3011,8 @@ EnemyAttackDamage:
 	ld a, [wEnemyMonLevel]
 	ld e, a
 	call DittoMetalPowder
-	call DragonairShield
+	call PokemonShield
+	call PokemonBracelet
 
 	ld a, 1
 	and a
