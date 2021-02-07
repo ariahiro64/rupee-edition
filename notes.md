@@ -14,7 +14,7 @@ Lens Of Truth aka Truth Lens (Accuracy boosting held item): Teru-Sama (179)/ITEM
 Feather (Speed Increasing Held Item): Teru-Sama (136)/ITEM_87
 Mogma Mitts (Escape Rope): Teru-Sama (19)/ITEM_13
 Hawkeye (Scope_Lens)
-Bracelet (Attack boosting held item): Teru-Sama (141)/ITEM_8D
+Bracelet (Attack/Special Attack boosting held item): Teru-Sama (141)/ITEM_8D
 Fairies/Great Fairies (Revives)
 Necklace (Friendship boosting held item): Teru-Sama (145)/ITEM_91
 Shield (Defense/Special Defense Increasing Held Item): Teru-Sama (142)/ITEM_8E
