@@ -34,4 +34,5 @@ Pokeballs are their correct color
 Running is implimented
 Removed redundant player sprites
 *Story elements to make universes make sense
-Redont artwork for less than stellar sprites
+Redone artwork for less than stellar sprites
+Gym Leaders are now challenging but also get stronger as you play through the game. 

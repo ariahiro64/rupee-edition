@@ -92,48 +92,79 @@ MartCianwood:
 	db -1 ; end
 
 MartGoldenrod2F1:
-	db 8 ; # items
-	db POTION
-	db SUPER_POTION
+	db 16 ; # items
+	db POKE_BALL
+	db GREAT_BALL
+	db ULTRA_BALL
+	db ESCAPE_ROPE
+	db MAX_REPEL
+	db MAX_POTION
+	db FULL_HEAL
 	db ETHER
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db AWAKENING
-	db BURN_HEAL
-	db ICE_HEAL
+	db MAX_REVIVE
+	db TRUTH_LENS
+	db FEATHER
+	db SCOPE_LENS
+	db BRACELET
+	db NECKLACE
+	db SHIELD
+	db BRACELET
 	db -1 ; end
 
 MartGoldenrod2F2:
-	db 10 ; # items
-	db POKE_BALL
-	db GREAT_BALL
-	db ESCAPE_ROPE
-	db REPEL
-	db REVIVE
-	db FULL_HEAL
-	db ETHER
-	db POKE_DOLL
-	db FLOWER_MAIL
+	db 15 ; # items
+	db BLACKBELT_I
+	db BLACKGLASSES
+	db CHARCOAL
+	db HARD_STONE
+	db MAGNET
+	db MIRACLE_SEED
+	db MYSTIC_WATER
+	db NEVERMELTICE
+	db PINK_BOW
+	db POISON_BARB
+	db SHARP_BEAK
+	db SILVERPOWDER
+	db SOFT_SAND
+	db SPELL_TAG
+	db TWISTEDSPOON
 	db -1 ; end
 
 MartGoldenrod3F:
-	db 7 ; # items
-	db X_SPEED
-	db X_SPECIAL
-	db X_DEFEND
-	db X_ATTACK
-	db DIRE_HIT
-	db GUARD_SPEC
-	db X_ACCURACY
-	db -1 ; end
-
-MartGoldenrod4F:
-	db 5 ; # items
+	db 14 ; # items
+	db HP_UP
 	db PROTEIN
 	db IRON
 	db CARBOS
 	db CALCIUM
-	db HP_UP
+	db PP_UP
+	db MAX_ELIXER
+	db X_ACCURACY
+	db GUARD_SPEC
+	db DIRE_HIT
+	db X_ATTACK
+	db X_DEFEND
+	db X_SPEED
+	db X_SPECIAL
+	db -1 ; end
+
+MartGoldenrod4F:
+	db 15 ; # items
+	db MOON_STONE
+	db FIRE_STONE
+	db THUNDERSTONE
+	db WATER_STONE
+	db LEAF_STONE
+	db EVERSTONE
+	db SUN_STONE
+	db DRAGON_SCALE
+	db METAL_COAT
+	db KINGS_ROCK
+	db METAL_POWDER
+	db LUCKY_PUNCH
+	db STICK
+	db THICK_CLUB
+	db LIGHT_BALL
 	db -1 ; end
 
 MartGoldenrod5F:
@@ -291,31 +322,42 @@ MartVermilion:
 	db -1 ; end
 
 MartCeladon2F1:
-	db 10 ; # items
-	db POTION
-	db SUPER_POTION
-	db HYPER_POTION
-	db MAX_POTION
-	db ETHER
-	db MAX_ETHER
-	db REVIVE
-	db MAX_REVIVE
-	db SUPER_REPEL
-	db MAX_REPEL
-	db -1 ; end
-
-MartCeladon2F2:
-	db 10 ; # items
+	db 16 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
 	db ESCAPE_ROPE
+	db MAX_REPEL
+	db MAX_POTION
 	db FULL_HEAL
-	db ANTIDOTE
-	db BURN_HEAL
-	db ICE_HEAL
-	db AWAKENING
-	db PARLYZ_HEAL
+	db ETHER
+	db MAX_REVIVE
+	db TRUTH_LENS
+	db FEATHER
+	db SCOPE_LENS
+	db BRACELET
+	db NECKLACE
+	db SHIELD
+	db BRACELET
+	db -1 ; end
+
+MartCeladon2F2:
+	db 15 ; # items
+	db BLACKBELT_I
+	db BLACKGLASSES
+	db CHARCOAL
+	db HARD_STONE
+	db MAGNET
+	db MIRACLE_SEED
+	db MYSTIC_WATER
+	db NEVERMELTICE
+	db PINK_BOW
+	db POISON_BARB
+	db SHARP_BEAK
+	db SILVERPOWDER
+	db SOFT_SAND
+	db SPELL_TAG
+	db TWISTEDSPOON
 	db -1 ; end
 
 MartCeladon3F:
@@ -334,23 +376,33 @@ MartCeladon3F:
 	db -1 ; end
 
 MartCeladon4F:
-	db 3 ; # items
-	db POKE_DOLL
-	db LOVELY_MAIL
-	db SURF_MAIL
-	db -1 ; end
+db 15 ; # items
+	db MOON_STONE
+	db FIRE_STONE
+	db THUNDERSTONE
+	db WATER_STONE
+	db LEAF_STONE
+	db EVERSTONE
+	db SUN_STONE
+	db DRAGON_SCALE
+	db METAL_COAT
+	db KINGS_ROCK
+	db METAL_POWDER
+	db LUCKY_PUNCH
+	db STICK
+	db THICK_CLUB
+	db LIGHT_BALL
+	db -1 ; endd
 
 MartCeladon5F1:
-	db 5 ; # items
+	db 14 ; # items
 	db HP_UP
 	db PROTEIN
 	db IRON
 	db CARBOS
 	db CALCIUM
-	db -1 ; end
-
-MartCeladon5F2:
-	db 7 ; # items
+	db PP_UP
+	db MAX_ELIXER
 	db X_ACCURACY
 	db GUARD_SPEC
 	db DIRE_HIT
@@ -358,6 +410,17 @@ MartCeladon5F2:
 	db X_DEFEND
 	db X_SPEED
 	db X_SPECIAL
+	db -1 ; end
+
+MartCeladon5F2:
+	db 7 ; # items
+	db HEAVY_BALL
+	db LURE_BALL
+	db FRIEND_BALL
+	db LOVE_BALL
+	db LEVEL_BALL
+	db FAST_BALL
+	db MOON_BALL
 	db -1 ; end
 
 MartFuchsia:

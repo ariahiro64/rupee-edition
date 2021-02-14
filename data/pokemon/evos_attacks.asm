@@ -1830,6 +1830,8 @@ EeveeEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SHARPEN
+	db 1, GROWTH
 	db 8, SAND_ATTACK
 	db 16, GROWL
 	db 23, QUICK_ATTACK
@@ -1842,6 +1844,8 @@ VaporeonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SHARPEN
+	db 1, GROWTH
 	db 8, SAND_ATTACK
 	db 16, WATER_GUN
 	db 23, QUICK_ATTACK
@@ -1856,6 +1860,8 @@ JolteonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SHARPEN
+	db 1, GROWTH
 	db 8, SAND_ATTACK
 	db 16, THUNDERSHOCK
 	db 23, QUICK_ATTACK
@@ -1870,6 +1876,8 @@ FlareonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SHARPEN
+	db 1, GROWTH
 	db 8, SAND_ATTACK
 	db 16, EMBER
 	db 23, QUICK_ATTACK
@@ -1951,14 +1959,18 @@ KabutopsEvosAttacks:
 
 AerodactylEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WING_ATTACK
+	db 1, ROCK_SLIDE
+	db 1, DRILL_PECK
+	db 1, OUTRAGE
+	db 1, SHARPEN
 	db 8, AGILITY
 	db 15, BITE
 	db 22, SUPERSONIC
 	db 29, ANCIENTPOWER
 	db 36, SCARY_FACE
 	db 43, TAKE_DOWN
-	db 50, HYPER_BEAM
+	db 45, ROCK_SLIDE
+	db 50, OUTRAGE
 	db 0 ; no more level-up moves
 
 SnorlaxEvosAttacks:
@@ -2718,6 +2730,8 @@ EspeonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SHARPEN
+	db 1, GROWTH
 	db 8, SAND_ATTACK
 	db 10, BITE
 	db 16, CONFUSION
@@ -2733,6 +2747,8 @@ UmbreonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, TAIL_WHIP
+	db 1, SHARPEN
+	db 1, GROWTH
 	db 8, SAND_ATTACK
 	db 16, PURSUIT
 	db 23, QUICK_ATTACK
@@ -2781,6 +2797,8 @@ MisdreavusEvosAttacks:
 UnownEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HIDDEN_POWER
+	db 1, TRANSFORM
+	db 1, METRONOME
 	db 0 ; no more level-up moves
 
 WobbuffetEvosAttacks:
@@ -2942,12 +2960,18 @@ HeracrossEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, LEER
+	db 1, MACH_PUNCH
+	db 1, SUBMISSION
+	db 1, VITAL_THROW
 	db 6, HORN_ATTACK
 	db 12, ENDURE
 	db 19, FURY_ATTACK
+	db 25, MACH_PUNCH
 	db 27, COUNTER
+	db 30, SUBMISSION
 	db 35, TAKE_DOWN
 	db 44, REVERSAL
+	db 50, CROSS_CHOP
 	db 54, MEGAHORN
 	db 0 ; no more level-up moves
 
