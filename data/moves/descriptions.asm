@@ -4,7 +4,7 @@ MoveDescriptions::
 	dw KarateChopDescription
 	dw DoubleslapDescription
 	dw CometPunchDescription
-	dw MegaPunchDescription
+	dw SkyUppercutDescription
 	dw PayDayDescription
 	dw FirePunchDescription
 	dw IcePunchDescription
@@ -24,7 +24,7 @@ MoveDescriptions::
 	dw VineWhipDescription
 	dw StompDescription
 	dw DoubleKickDescription
-	dw MegaKickDescription
+	dw GildedSlashDescription
 	dw JumpKickDescription
 	dw RollingKickDescription
 	dw SandAttackDescription
@@ -41,7 +41,7 @@ MoveDescriptions::
 	dw TailWhipDescription
 	dw PoisonStingDescription
 	dw TwineedleDescription
-	dw PinMissileDescription
+	dw SilverWindDescription
 	dw LeerDescription
 	dw BiteDescription
 	dw GrowlDescription
@@ -60,10 +60,10 @@ MoveDescriptions::
 	dw IceBeamDescription
 	dw BlizzardDescription
 	dw PsybeamDescription
-	dw BubblebeamDescription
+	dw WaterPulseDescription
 	dw AuroraBeamDescription
 	dw HyperBeamDescription
-	dw PeckDescription
+	dw AerialAceDescription
 	dw DrillPeckDescription
 	dw SubmissionDescription
 	dw LowKickDescription
@@ -121,7 +121,7 @@ MoveDescriptions::
 	dw MirrorMoveDescription
 	dw SelfdestructDescription
 	dw EggBombDescription
-	dw LickDescription
+	dw ShadowForceDescription
 	dw SmogDescription
 	dw SludgeDescription
 	dw BoneClubDescription
@@ -131,7 +131,7 @@ MoveDescriptions::
 	dw SwiftDescription
 	dw SkullBashDescription
 	dw SpikeCannonDescription
-	dw ConstrictDescription
+	dw NastyPlotDescription
 	dw AmnesiaDescription
 	dw KinesisDescription
 	dw SoftboiledDescription
@@ -238,7 +238,7 @@ MoveDescriptions::
 	dw MoonlightDescription
 	dw HiddenPowerDescription
 	dw CrossChopDescription
-	dw TwisterDescription
+	dw DragonSmashDescription
 	dw RainDanceDescription
 	dw SunnyDayDescription
 	dw CrunchDescription
@@ -280,9 +280,9 @@ CometPunchDescription:
 	db   "Repeatedly punches"
 	next "2-5 times.@"
 
-MegaPunchDescription:
-	db   "A powerful punch"
-	next "thrown very hard.@"
+SkyUppercutDescription:
+	db   "A Sky High Punch"
+	next "that hits fliers.@"
 
 PayDayDescription:
 	db   "Throws coins. Gets"
@@ -360,9 +360,9 @@ DoubleKickDescription:
 	db   "A double kicking"
 	next "attack.@"
 
-MegaKickDescription:
-	db   "A powerful kicking"
-	next "attack.@"
+GildedSlashDescription:
+	db   "Gilded Edges with"
+	next "static tips.@"
 
 JumpKickDescription:
 	db   "May miss, damaging"
@@ -428,9 +428,9 @@ TwineedleDescription:
 	db   "Jabs the foe twice"
 	next "using stingers.@"
 
-PinMissileDescription:
-	db   "Fires pins that"
-	next "strike 2-5 times.@"
+SilverWindDescription:
+	db   "Light wind that may"
+	next "raise all stats.@"
 
 LeerDescription:
 	db   "Reduces the foe's"
@@ -504,9 +504,9 @@ PsybeamDescription:
 	db   "An attack that may"
 	next "confuse the foe.@"
 
-BubblebeamDescription:
-	db   "An attack that may"
-	next "lower SPEED.@"
+WaterPulseDescription:
+	db   "Wet pulse that may"
+	next "confuse the foe.@"
 
 AuroraBeamDescription:
 	db   "An attack that may"
@@ -516,9 +516,9 @@ HyperBeamDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
-PeckDescription:
-	db   "Jabs the foe with"
-	next "a beak, etc.@"
+AerialAceDescription:
+	db   "Aerial slash that"
+	next "never misses.@"
 
 DrillPeckDescription:
 	db   "A strong, spin-"
@@ -748,9 +748,9 @@ EggBombDescription:
 	db   "Eggs are hurled at"
 	next "the foe.@"
 
-LickDescription:
-	db   "An attack that may"
-	next "cause paralysis.@"
+ShadowForceDescription:
+	db   "1st turn: Disappear"
+	next "2nd turn: Unleash@"
 
 SmogDescription:
 	db   "An attack that may"
@@ -788,9 +788,9 @@ SpikeCannonDescription:
 	db   "Fires spikes to"
 	next "hit 2-5 times.@"
 
-ConstrictDescription:
-	db   "An attack that may"
-	next "lower SPEED.@"
+NastyPlotDescription:
+	db   "Sharply raises the"
+	next "user's Spcl.Atk.@"
 
 AmnesiaDescription:
 	db   "Sharply raises the"
@@ -1216,9 +1216,9 @@ CrossChopDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
-TwisterDescription:
-	db   "Whips up a tornado"
-	next "to attack.@"
+DragonSmashDescription:
+	db   "Fierce Rampage that"
+	next "hurts the user.@"
 
 RainDanceDescription:
 	db   "Boosts water-type"

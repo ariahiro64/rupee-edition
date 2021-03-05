@@ -184,7 +184,7 @@ GrowlitheEggMoves:
 PoliwagEggMoves:
 	db MIST
 	db SPLASH
-	db BUBBLEBEAM
+	db WATER_PULSE
 	db HAZE
 	db MIND_READER
 	db -1 ; end
@@ -219,7 +219,7 @@ TentacoolEggMoves:
 	db -1 ; end
 
 GeodudeEggMoves:
-	db MEGA_PUNCH
+	db SKY_UPPERCUT
 	db ROCK_SLIDE
 	db -1 ; end
 
@@ -256,10 +256,10 @@ DoduoEggMoves:
 	db -1 ; end
 
 SeelEggMoves:
-	db LICK
+	db SHADOW_FORCE
 	db PERISH_SONG
 	db DISABLE
-	db PECK
+	db AERIAL_ACE
 	db SLAM
 	db ENCORE
 	db -1 ; end
@@ -267,11 +267,11 @@ SeelEggMoves:
 GrimerEggMoves:
 	db HAZE
 	db MEAN_LOOK
-	db LICK
+	db SHADOW_FORCE
 	db -1 ; end
 
 ShellderEggMoves:
-	db BUBBLEBEAM
+	db WATER_PULSE
 	db TAKE_DOWN
 	db BARRIER
 	db RAPID_SPIN
@@ -412,7 +412,7 @@ EeveeEggMoves:
 	db -1 ; end
 
 OmanyteEggMoves:
-	db BUBBLEBEAM
+	db WATER_PULSE
 	db AURORA_BEAM
 	db SLAM
 	db SUPERSONIC
@@ -420,7 +420,7 @@ OmanyteEggMoves:
 	db -1 ; end
 
 KabutoEggMoves:
-	db BUBBLEBEAM
+	db WATER_PULSE
 	db AURORA_BEAM
 	db RAPID_SPIN
 	db DIG
@@ -434,7 +434,7 @@ AerodactylEggMoves:
 	db -1 ; end
 
 SnorlaxEggMoves:
-	db LICK
+	db SHADOW_FORCE
 	db -1 ; end
 
 DratiniEggMoves:
@@ -534,7 +534,7 @@ IgglybuffEggMoves:
 TogepiEggMoves:
 	db PRESENT
 	db MIRROR_MOVE
-	db PECK
+	db AERIAL_ACE
 	db FORESIGHT
 	db FUTURE_SIGHT
 	db -1 ; end
@@ -628,7 +628,7 @@ GirafarigEggMoves:
 
 PinecoEggMoves:
 	db REFLECT
-	db PIN_MISSILE
+	db SILVER_WIND
 	db FLAIL
 	db SWIFT
 	db -1 ; end
@@ -655,14 +655,14 @@ SnubbullEggMoves:
 	db PRESENT
 	db CRUNCH
 	db HEAL_BELL
-	db LICK
+	db SHADOW_FORCE
 	db LEER
 	db -1 ; end
 
 QwilfishEggMoves:
 	db FLAIL
 	db HAZE
-	db BUBBLEBEAM
+	db WATER_PULSE
 	db SUPERSONIC
 	db -1 ; end
 
@@ -730,7 +730,7 @@ DelibirdEggMoves:
 	db -1 ; end
 
 MantineEggMoves:
-	db TWISTER
+	db DRAGON_SMASH
 	db HYDRO_PUMP
 	db HAZE
 	db SLAM
@@ -773,6 +773,11 @@ TyrogueEggMoves:
 	db HI_JUMP_KICK
 	db MACH_PUNCH
 	db MIND_READER
+	db GILDED_SLASH
+	db AERIAL_ACE
+	db DRAGON_SMASH
+	db SHADOW_FORCE
+	db SKY_UPPERCUT
 	db -1 ; end
 
 SmoochumEggMoves:
@@ -789,7 +794,7 @@ ElekidEggMoves:
 
 MagbyEggMoves:
 	db KARATE_CHOP
-	db MEGA_PUNCH
+	db SKY_UPPERCUT
 	db BARRIER
 	db SCREECH
 	db CROSS_CHOP

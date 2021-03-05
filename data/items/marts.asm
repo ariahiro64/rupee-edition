@@ -57,7 +57,7 @@ MartViolet:
 	db POKE_BALL
 	db POTION
 	db ETHER
-	db ESCAPE_ROPE
+	db MOGMA_MITTS
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
@@ -74,7 +74,7 @@ MartAzalea:
 	db POTION
 	db SUPER_POTION
 	db ETHER
-	db ESCAPE_ROPE
+	db MOGMA_MITTS
 	db REPEL
 	db ANTIDOTE
 	db PARLYZ_HEAL
@@ -87,7 +87,7 @@ MartCianwood:
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
-	db REVIVE
+	db FAIRY
 	db ETHER
 	db -1 ; end
 
@@ -96,15 +96,15 @@ MartGoldenrod2F1:
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
-	db ESCAPE_ROPE
+	db MOGMA_MITTS
 	db MAX_REPEL
 	db MAX_POTION
 	db FULL_HEAL
 	db ETHER
-	db MAX_REVIVE
+	db GREAT_FAIRY
 	db TRUTH_LENS
 	db FEATHER
-	db SCOPE_LENS
+	db HAWKEYE
 	db BRACELET
 	db NECKLACE
 	db SHIELD
@@ -168,7 +168,7 @@ MartGoldenrod4F:
 	db -1 ; end
 
 MartGoldenrod5F:
-	db 9 ; # items
+	db 10 ; # items
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
@@ -178,6 +178,8 @@ MartGoldenrod5F:
 	db TM_ROCK_SMASH
 	db TM_PSYCHIC_M
 	db TM_THIEF
+	db TM_GILDED_SLASH
+	db TM_AERIAL_ACE
 	db -1 ; end
 
 MartOlivine:
@@ -208,7 +210,7 @@ MartEcruteak:
 	db AWAKENING
 	db BURN_HEAL
 	db ICE_HEAL
-	db REVIVE
+	db FAIRY
 	db -1 ; end
 
 MartMahogany1:
@@ -232,8 +234,8 @@ MartMahogany2:
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db SUPER_REPEL
-	db REVIVE
-	db MAX_REVIVE
+	db FAIRY
+	db GREAT_FAIRY
 	db FLOWER_MAIL
 	db -1 ; end
 
@@ -246,7 +248,7 @@ MartBlackthorn:
 	db ETHER
 	db MAX_ETHER
 	db FULL_HEAL
-	db REVIVE
+	db FAIRY
 	db MAX_REPEL
 	db X_DEFEND
 	db X_ATTACK
@@ -258,7 +260,7 @@ MartViridian:
 	db HYPER_POTION
 	db MAX_ETHER
 	db FULL_HEAL
-	db REVIVE
+	db FAIRY
 	db ANTIDOTE
 	db PARLYZ_HEAL
 	db AWAKENING
@@ -313,8 +315,8 @@ MartVermilion:
 	db HYPER_POTION
 	db ETHER
 	db MAX_ETHER
-	db REVIVE
-	db MAX_REVIVE
+	db FAIRY
+	db GREAT_FAIRY
 	db PARLYZ_HEAL
 	db AWAKENING
 	db BURN_HEAL
@@ -326,15 +328,15 @@ MartCeladon2F1:
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
-	db ESCAPE_ROPE
+	db MOGMA_MITTS
 	db MAX_REPEL
 	db MAX_POTION
 	db FULL_HEAL
 	db ETHER
-	db MAX_REVIVE
+	db GREAT_FAIRY
 	db TRUTH_LENS
 	db FEATHER
-	db SCOPE_LENS
+	db HAWKEYE
 	db BRACELET
 	db NECKLACE
 	db SHIELD
@@ -362,8 +364,6 @@ MartCeladon2F2:
 
 MartCeladon3F:
 	db 11 ; # items
-	db TM_PSYCH_UP
-	db TM_PROTECT
 	db TM_THUNDERPUNCH
 	db TM_FIRE_PUNCH
 	db TM_ICE_PUNCH
@@ -373,6 +373,8 @@ MartCeladon3F:
 	db TM_ROCK_SMASH
 	db TM_PSYCHIC_M
 	db TM_THIEF
+	db TM_GILDED_SLASH
+	db TM_AERIAL_ACE
 	db -1 ; end
 
 MartCeladon4F:
@@ -443,7 +445,7 @@ MartSaffron:
 	db HYPER_POTION
 	db MAX_POTION
 	db MAX_ETHER
-	db MAX_REVIVE
+	db GREAT_FAIRY
 	db FULL_HEAL
 	db X_ATTACK
 	db X_DEFEND
@@ -470,8 +472,8 @@ MartIndigoPlateau:
 	db FULL_RESTORE
 	db ETHER
 	db MAX_ETHER
-	db REVIVE
-	db MAX_REVIVE
+	db FAIRY
+	db GREAT_FAIRY
 	db FULL_HEAL
 	db -1 ; end
 

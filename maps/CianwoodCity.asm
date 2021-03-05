@@ -144,7 +144,7 @@ CianwoodCityRock:
 	jumpstd SmashRockScript
 
 CianwoodCityHiddenRevive:
-	hiddenitem REVIVE, EVENT_CIANWOOD_CITY_HIDDEN_REVIVE
+	hiddenitem FAIRY, EVENT_CIANWOOD_CITY_HIDDEN_FAIRY
 
 CianwoodCityHiddenMaxEther:
 	hiddenitem MAX_ETHER, EVENT_CIANWOOD_CITY_HIDDEN_MAX_ETHER

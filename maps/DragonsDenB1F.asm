@@ -180,7 +180,7 @@ DragonsDenB1FMaxElixer:
 	itemball MAX_ELIXER
 
 DragonsDenB1FHiddenRevive:
-	hiddenitem REVIVE, EVENT_DRAGONS_DEN_B1F_HIDDEN_REVIVE
+	hiddenitem FAIRY, EVENT_DRAGONS_DEN_B1F_HIDDEN_FAIRY
 
 DragonsDenB1FHiddenMaxPotion:
 	hiddenitem MAX_POTION, EVENT_DRAGONS_DEN_B1F_HIDDEN_MAX_POTION

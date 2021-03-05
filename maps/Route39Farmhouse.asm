@@ -68,7 +68,7 @@ FarmerMScript_Milking:
 PokefanF_SnoreFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	checkevent EVENT_GOT_TM13_AERIAL_ACE_FROM_MOOMOO_FARM
 	iftrue FarmerFScript_GotSnore
 	checkevent EVENT_HEALED_MOOMOO
 	iftrue FarmerFScript_GiveSnore
@@ -80,9 +80,9 @@ PokefanF_SnoreFarmer:
 FarmerFScript_GiveSnore:
 	writetext FarmerFText_HealedMiltank
 	promptbutton
-	verbosegiveitem TM_SNORE
+	verbosegiveitem TM_AERIAL_ACE
 	iffalse FarmerFScript_NoRoomForSnore
-	setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	setevent EVENT_GOT_TM13_AERIAL_ACE_FROM_MOOMOO_FARM
 FarmerFScript_GotSnore:
 	writetext FarmerFText_SnoreSpeech
 	waitbutton
@@ -179,13 +179,13 @@ Text_ReceivedTM13:
 
 FarmerFText_SnoreSpeech:
 	text "That there's"
-	line "SNORE."
+	line "AERIAL_ACE."
 
-	para "It's a rare move"
-	line "that only works"
+	para "Doesn't seem much"
+	line "but it never misses"
 
-	para "while the #MON"
-	line "is asleep."
+	para "so its good for"
+	line "flying+special #MON."
 
 	para "You best think how"
 	line "you ought to use"

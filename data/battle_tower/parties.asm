@@ -134,7 +134,7 @@ BattleTowerMons1:
 	db "GARU-RA@@@@"
 
 	db CORSOLA
-	db SCOPE_LENS
+	db HAWKEYE
 	db SURF, PSYCHIC_M, RECOVER, ANCIENTPOWER
 	dw 0 ; OT ID
 	dt 1000 ; Exp
@@ -892,7 +892,7 @@ BattleTowerMons2:
 
 	db HITMONCHAN
 	db GOLD_BERRY
-	db THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH, MEGA_PUNCH
+	db THUNDERPUNCH, ICE_PUNCH, FIRE_PUNCH, SKY_UPPERCUT
 	dw 0 ; OT ID
 	dt 8000 ; Exp
 	; Stat exp
@@ -1519,7 +1519,7 @@ BattleTowerMons3:
 
 	db TENTACRUEL
 	db KINGS_ROCK
-	db WRAP, TOXIC, SLUDGE_BOMB, BUBBLEBEAM
+	db WRAP, TOXIC, SLUDGE_BOMB, WATER_PULSE
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1545,7 +1545,7 @@ BattleTowerMons3:
 
 	db GENGAR
 	db GOLD_BERRY
-	db THIEF, LICK, NIGHT_SHADE, GIGA_DRAIN
+	db THIEF, SHADOW_FORCE, NIGHT_SHADE, GIGA_DRAIN
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1597,7 +1597,7 @@ BattleTowerMons3:
 
 	db FEAROW
 	db BRIGHTPOWDER
-	db MIRROR_MOVE, PURSUIT, PECK, SWIFT
+	db MIRROR_MOVE, PURSUIT, AERIAL_ACE, SWIFT
 	dw 0 ; OT ID
 	dt 27000 ; Exp
 	; Stat exp
@@ -1860,7 +1860,7 @@ BattleTowerMons4:
 
 	db GOLEM
 	db FOCUS_BAND
-	db EXPLOSION, EARTHQUAKE, MEGA_PUNCH, ROCK_SLIDE
+	db EXPLOSION, EARTHQUAKE, SKY_UPPERCUT, ROCK_SLIDE
 	dw 0 ; OT ID
 	dt 64000 ; Exp
 	; Stat exp
@@ -1885,7 +1885,7 @@ BattleTowerMons4:
 	db "GORO-NIya@@"
 
 	db SCIZOR
-	db SCOPE_LENS
+	db HAWKEYE
 	db SLASH, STEEL_WING, PURSUIT, HYPER_BEAM
 	dw 0 ; OT ID
 	dt 64000 ; Exp
@@ -2434,7 +2434,7 @@ BattleTowerMons5:
 	db "KAIRIKI-@@@"
 
 	db STARMIE
-	db SCOPE_LENS
+	db HAWKEYE
 	db THUNDER_WAVE, RECOVER, THUNDERBOLT, SURF
 	dw 0 ; OT ID
 	dt 125000 ; Exp
@@ -2668,7 +2668,7 @@ BattleTowerMons5:
 	db "HAGANE-RU@@"
 
 	db GIRAFARIG
-	db SCOPE_LENS
+	db HAWKEYE
 	db DREAM_EATER, CRUNCH, PSYCHIC_M, EARTHQUAKE
 	dw 0 ; OT ID
 	dt 125000 ; Exp
@@ -3217,7 +3217,7 @@ BattleTowerMons6:
 	db "SAIDON@@@@@"
 
 	db SANDSLASH
-	db SCOPE_LENS
+	db HAWKEYE
 	db EARTHQUAKE, SLASH, HYPER_BEAM, SNORE
 	dw 0 ; OT ID
 	dt 216000 ; Exp
@@ -3610,7 +3610,7 @@ BattleTowerMons7:
 	db "NUO-@@@@@@@"
 
 	db URSARING
-	db SCOPE_LENS
+	db HAWKEYE
 	db SLASH, EARTHQUAKE, HYPER_BEAM, THUNDERPUNCH
 	dw 0 ; OT ID
 	dt 343000 ; Exp
@@ -3715,7 +3715,7 @@ BattleTowerMons7:
 
 	db HITMONLEE
 	db FOCUS_BAND
-	db REVERSAL, ENDURE, BODY_SLAM, MEGA_KICK
+	db REVERSAL, ENDURE, BODY_SLAM, GILDED_SLASH
 	dw 0 ; OT ID
 	dt 343000 ; Exp
 	; Stat exp
@@ -3792,7 +3792,7 @@ BattleTowerMons7:
 	db "HUSIGIBANA@"
 
 	db CHARIZARD
-	db SCOPE_LENS
+	db HAWKEYE
 	db SLASH, EARTHQUAKE, HYPER_BEAM, FLAMETHROWER
 	dw 0 ; OT ID
 	dt 343000 ; Exp
@@ -4289,7 +4289,7 @@ BattleTowerMons8:
 	db "MARUMAIN@@@"
 
 	db DUGTRIO
-	db SCOPE_LENS
+	db HAWKEYE
 	db SLASH, EARTHQUAKE, THIEF, MUD_SLAP
 	dw 0 ; OT ID
 	dt 512000 ; Exp
@@ -5101,7 +5101,7 @@ BattleTowerMons10:
 	db "UINDEi@@@@@"
 
 	db CHARIZARD
-	db SCOPE_LENS
+	db HAWKEYE
 	db FLAMETHROWER, EARTHQUAKE, SLASH, FLY
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
@@ -5257,7 +5257,7 @@ BattleTowerMons10:
 	db "MUUMA@@@@@@"
 
 	db SNEASEL
-	db SCOPE_LENS
+	db HAWKEYE
 	db SLASH, BLIZZARD, DREAM_EATER, FAINT_ATTACK
 	dw 0 ; OT ID
 	dt 1000000 ; Exp

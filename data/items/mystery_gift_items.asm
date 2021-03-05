@@ -17,7 +17,7 @@ MysteryGiftItems:
 	db MUSIC_MAIL
 	db MIRACLEBERRY
 	db GOLD_BERRY
-	db REVIVE
+	db FAIRY
 	db GREAT_BALL
 	db SUPER_REPEL
 	db MAX_REPEL
@@ -29,8 +29,8 @@ MysteryGiftItems:
 	db THUNDERSTONE
 	db MAX_ETHER
 	db MAX_ELIXER
-	db MAX_REVIVE
-	db SCOPE_LENS
+	db GREAT_FAIRY
+	db HAWKEYE
 	db HP_UP
 	db PP_UP
 	db RARE_CANDY

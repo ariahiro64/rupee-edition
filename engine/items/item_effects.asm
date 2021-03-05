@@ -37,7 +37,6 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw SwordEffect         ; SWORD
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -51,18 +50,16 @@ ItemEffects:
 	dw NoEffect            ; NUGGET
 	dw PokeDollEffect      ; POKE_DOLL
 	dw StatusHealingEffect ; FULL_HEAL
-	dw ReviveEffect        ; REVIVE
-	dw ReviveEffect        ; MAX_REVIVE
+	dw ReviveEffect        ; FAIRY
+	dw ReviveEffect        ; GREAT_FAIRY
 	dw GuardSpecEffect     ; GUARD_SPEC
 	dw SuperRepelEffect    ; SUPER_REPEL
 	dw MaxRepelEffect      ; MAX_REPEL
 	dw DireHitEffect       ; DIRE_HIT
-	dw ParagliderEffect    ; PARAGLIDER
 	dw RestoreHPEffect     ; FRESH_WATER
 	dw RestoreHPEffect     ; SODA_POP
 	dw RestoreHPEffect     ; LEMONADE
 	dw XItemEffect         ; X_ATTACK
-	dw GauntletsEffect     ; GAUNTLETS
 	dw XItemEffect         ; X_DEFEND
 	dw XItemEffect         ; X_SPEED
 	dw XItemEffect         ; X_SPECIAL
@@ -100,9 +97,8 @@ ItemEffects:
 	dw NoEffect            ; RED_APRICORN
 	dw NoEffect            ; TINYMUSHROOM
 	dw NoEffect            ; BIG_MUSHROOM
-	dw NoEffect            ; 
+	dw NoEffect            ; SILVERPOWDER
 	dw NoEffect            ; BLU_APRICORN
-	dw FlippersEffect      ; FLIPPERS
 	dw NoEffect            ; AMULET_COIN
 	dw NoEffect            ; YLW_APRICORN
 	dw NoEffect            ; GRN_APRICORN
@@ -112,7 +108,6 @@ ItemEffects:
 	dw NoEffect            ; WHT_APRICORN
 	dw NoEffect            ; BLACKBELT_I
 	dw NoEffect            ; BLK_APRICORN
-	dw LanternEffect       ; LANTERN
 	dw NoEffect            ; PNK_APRICORN
 	dw NoEffect            ; BLACKGLASSES
 	dw NoEffect            ; SLOWPOKETAIL
@@ -132,7 +127,6 @@ ItemEffects:
 	dw NoEffect            ; MIRACLE_SEED
 	dw NoEffect            ; THICK_CLUB
 	dw NoEffect            ; FOCUS_BAND
-	dw WindWakerEffect     ; WIND_WAKER
 	dw EnergypowderEffect  ; ENERGYPOWDER
 	dw EnergyRootEffect    ; ENERGY_ROOT
 	dw HealPowderEffect    ; HEAL_POWDER
@@ -147,34 +141,21 @@ ItemEffects:
 	dw NoEffect            ; STAR_PIECE
 	dw BasementKeyEffect   ; BASEMENT_KEY
 	dw NoEffect            ; PASS
-	dw NoEffect			   ; FEATHER
-	dw ZoraScaleEffect     ; ZORA_SCALE
-	dw HammerEffect        ; HAMMER
 	dw NoEffect            ; CHARCOAL
 	dw RestoreHPEffect     ; BERRY_JUICE
 	dw NoEffect            ; HAWKEYE
-	dw NoEffect            ; BRACELET
-	dw NoEffect            ; SHIELD
 	dw NoEffect            ; METAL_COAT
 	dw NoEffect            ; DRAGON_FANG
-	dw NoEffect            ; NECKLACE
 	dw NoEffect            ; LEFTOVERS
-	dw NoEffect            ; ITEM_93
-	dw NoEffect            ; ITEM_94
-	dw NoEffect            ; ITEM_95
 	dw RestorePPEffect     ; MYSTERYBERRY
 	dw NoEffect            ; DRAGON_SCALE
 	dw NoEffect            ; BERSERK_GENE
-	dw NoEffect            ; ITEM_99
-	dw NoEffect            ; ITEM_9A
-	dw NoEffect            ; ITEM_9B
 	dw SacredAshEffect     ; SACRED_ASH
 	dw PokeBallEffect      ; HEAVY_BALL
 	dw NoEffect            ; FLOWER_MAIL
 	dw PokeBallEffect      ; LEVEL_BALL
 	dw PokeBallEffect      ; LURE_BALL
 	dw PokeBallEffect      ; FAST_BALL
-	dw NoEffect            ; ITEM_A2
 	dw NoEffect            ; LIGHT_BALL
 	dw PokeBallEffect      ; FRIEND_BALL
 	dw PokeBallEffect      ; MOON_BALL
@@ -183,15 +164,34 @@ ItemEffects:
 	dw GorgeousBoxEffect   ; GORGEOUS_BOX
 	dw EvoStoneEffect      ; SUN_STONE
 	dw NoEffect            ; POLKADOT_BOW
-	dw NoEffect            ; ITEM_AB
 	dw NoEffect            ; UP_GRADE
 	dw RestoreHPEffect     ; BERRY
 	dw RestoreHPEffect     ; GOLD_BERRY
 	dw SquirtbottleEffect  ; SQUIRTBOTTLE
-	dw NoEffect            ; ITEM_B0
 	dw PokeBallEffect      ; PARK_BALL
 	dw NoEffect            ; RAINBOW_WING
+	dw SwordEffect         ; SWORD
+	dw ClothEffect         ; CLOTH
+	dw FlippersEffect      ; FLIPPERS
+	dw GauntletsEffect     ; GAUNTLETS
+	dw LanternEffect       ; LANTERN
+	dw WindWakerEffect     ; WIND_WAKER
+	dw ZoraScaleEffect     ; ZORA_SCALE
+	dw HammerEffect        ; HAMMER
 	dw NoEffect            ; TRUTH_LENS
+	dw NoEffect			   ; FEATHER
+	dw NoEffect            ; BRACELET
+	dw NoEffect            ; NECKLACE
+	dw NoEffect            ; SHIELD
+	dw NoEffect            ; ITEM_AB
+	dw NoEffect            ; ITEM_AC
+	dw NoEffect            ; ITEM_AD
+	dw NoEffect            ; ITEM_AE
+	dw NoEffect            ; ITEM_AF
+	dw NoEffect            ; ITEM_B0
+	dw NoEffect            ; ITEM_B1
+	dw NoEffect            ; ITEM_B2
+	dw NoEffect            ; ITEM_B3
 	
 
 PokeBallEffect:
@@ -1556,7 +1556,7 @@ RevivePokemon:
 	xor a
 	ld [wLowHealthAlarm], a
 	ld a, [wCurItem]
-	cp REVIVE
+	cp FAIRY
 	jr z, .revive_half_hp
 
 	call ReviveFullHP
@@ -1567,7 +1567,7 @@ RevivePokemon:
 
 .finish_revive
 	call HealHP_SFX_GFX
-	ld a, PARTYMENUTEXT_REVIVE
+	ld a, PARTYMENUTEXT_FAIRY
 	ld [wPartyMenuActionText], a
 	call ItemActionTextWaitButton
 	call UseDisposableItem
@@ -2936,7 +2936,7 @@ FlippersEffect:
 	farcall SurfFunction
 	ret
 
-ParagliderEffect:
+ClothEffect:
 	ld a, 1
 	ld [wUsingHMItem], a
 	farcall FlyFunction

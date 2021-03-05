@@ -24,7 +24,6 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw SwordDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -44,18 +43,16 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw ParagliderDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw GauntletsDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw TeruSama5Desc
+	dw TeruSama2Desc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
@@ -89,7 +86,6 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw FlippersDesc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -99,7 +95,6 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw LanternDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -119,7 +114,6 @@ ItemDescriptions:
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusBandDesc
-	dw WindWakerDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -134,34 +128,21 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw FeatherDesc
-	dw ZoraScaleDesc
-	dw HammerDesc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
-	dw ScopeLensDesc
-	dw BraceletDesc
-	dw ShieldDesc
+	dw HawkeyeDesc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw NecklaceDesc
 	dw LeftoversDesc
-	dw TeruSama15Desc
-	dw TeruSama16Desc
-	dw TeruSama17Desc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
-	dw TeruSama18Desc
-	dw TeruSama19Desc
-	dw TeruSama20Desc
 	dw SacredAshDesc
 	dw HeavyBallDesc
 	dw FlowerMailDesc
 	dw LevelBallDesc
 	dw LureBallDesc
 	dw FastBallDesc
-	dw TeruSama21Desc
 	dw LightBallDesc
 	dw FriendBallDesc
 	dw MoonBallDesc
@@ -170,15 +151,12 @@ ItemDescriptions:
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
 	dw PolkadotBowDesc
-	dw TeruSama22Desc
 	dw UpGradeDesc
 	dw BerryDesc
 	dw GoldBerryDesc
 	dw SquirtBottleDesc
-	dw TeruSama23Desc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw TruthLensDesc
 	dw BrickPieceDesc
 	dw SurfMailDesc
 	dw LiteBlueMailDesc
@@ -189,6 +167,28 @@ ItemDescriptions:
 	dw BlueSkyMailDesc
 	dw MusicMailDesc
 	dw MirageMailDesc
+	dw SwordDesc
+	dw ClothDesc
+	dw FlippersDesc
+	dw GauntletsDesc
+	dw LanternDesc
+	dw WindWakerDesc
+	dw ZoraScaleDesc
+	dw HammerDesc
+	dw TruthLensDesc
+	dw FeatherDesc
+	dw BraceletDesc
+	dw NecklaceDesc
+	dw ShieldDesc
+	dw TeruSama3Desc
+	dw TeruSama4Desc
+	dw TeruSama5Desc
+	dw TeruSama6Desc
+	dw TeruSama7Desc
+	dw TeruSama8Desc
+	dw TeruSama9Desc
+	dw TeruSama10Desc
+	dw TeruSama11Desc
 	dw TeruSama25Desc
 	dw TeruSama26Desc
 	dw TeruSama26Desc
@@ -351,10 +351,6 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-SwordDesc:
-	db   "Your trusty sword!"
-	next "Very sharp.@"
-
 HPUpDesc:
 	db   "Raises the HP of"
 	next "one #MON.@"
@@ -431,9 +427,6 @@ DireHitDesc:
 	db   "Ups critical hit"
 	next "ratio. (1 BTL)@"
 
-TeruSama3Desc:
-	db   "?@"
-
 FreshWaterDesc:
 	db   "Restores #MON"
 	next "HP by 50.@"
@@ -449,9 +442,6 @@ LemonadeDesc:
 XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
-
-TeruSama4Desc:
-	db   "?@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -473,7 +463,7 @@ ItemfinderDesc:
 	db   "Checks for unseen"
 	next "items in the area.@"
 
-TeruSama5Desc:
+TeruSama2Desc:
 	db   "?@"
 
 ExpShareDesc:
@@ -606,10 +596,6 @@ SilverPowderDesc:
 BluApricornDesc:
 	db   "A blue APRICORN.@"
 
-FlippersDesc:
-	db   "Lets you swim in"
-	next "harsh waters.@"
-
 AmuletCoinDesc:
 	db   "Doubles monetary"
 	next "earnings. (HOLD)@"
@@ -642,9 +628,6 @@ BlackbeltDesc:
 BlkApricornDesc:
 	db   "A black APRICORN."
 	next "@"
-
-TeruSama7Desc:
-	db   "?@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
@@ -722,9 +705,6 @@ FocusBandDesc:
 	db   "May prevent faint-"
 	next "ing. (HOLD)@"
 
-TeruSama8Desc:
-	db   "?@"
-
 EnergyPowderDesc:
 	db   "Restores #MON"
 	next "HP by 50. Bitter.@"
@@ -780,16 +760,6 @@ PassDesc:
 	db   "A ticket for the"
 	next "MAGNET TRAIN.@"
 
-FeatherDesc:
-	db   "Raises Speed"
-	next "for moves. (HOLD)@"
-
-TeruSama10Desc:
-	db   "?@"
-
-TeruSama11Desc:
-	db   "?@"
-
 CharcoalDesc:
 	db   "Powers up fire-"
 	next "type moves. (HOLD)@"
@@ -798,17 +768,9 @@ BerryJuiceDesc:
 	db   "Restores #MON"
 	next "HP by 20.@"
 
-ScopeLensDesc:
+HawkeyeDesc:
 	db   "Raises critical"
 	next "hit ratio. (HOLD)@"
-
-BraceletDesc:
-	db   "Raises power"
-	next "of ATTACK. (HOLD)@"
-
-ShieldDesc:
-	db   "Raises your"
-	next "DEFENSE. (HOLD)@"
 
 MetalCoatDesc:
 	db   "Powers up steel-"
@@ -818,22 +780,9 @@ DragonFangDesc:
 	db   "Powers up dragon-"
 	next "type moves. (HOLD)@"
 
-NecklaceDesc:
-	db   "Raises happi-"
-	next "ness. (HOLD)@"
-
 LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
-
-TeruSama15Desc:
-	db   "?@"
-
-TeruSama16Desc:
-	db   "?@"
-
-TeruSama17Desc:
-	db   "?@"
 
 MysteryBerryDesc:
 	db   "A self-restore"
@@ -846,15 +795,6 @@ DragonScaleDesc:
 BerserkGeneDesc:
 	db   "Boosts ATTACK but"
 	next "causes confusion.@"
-
-TeruSama18Desc:
-	db   "?@"
-
-TeruSama19Desc:
-	db   "?@"
-
-TeruSama20Desc:
-	db   "?@"
 
 SacredAshDesc:
 	db   "Fully revives all"
@@ -879,9 +819,6 @@ LureBallDesc:
 FastBallDesc:
 	db   "A BALL for catch-"
 	next "ing fast #MON.@"
-
-TeruSama21Desc:
-	db   "?@"
 
 LightBallDesc:
 	db   "An odd, electrical"
@@ -915,9 +852,6 @@ PolkadotBowDesc:
 	db   "Powers up normal-"
 	next "type moves. (HOLD)@"
 
-TeruSama22Desc:
-	db   "?@"
-
 UpGradeDesc:
 	db   "A mysterious box"
 	next "made by SILPH CO.@"
@@ -934,9 +868,6 @@ SquirtBottleDesc:
 	db   "A bottle used for"
 	next "watering plants.@"
 
-TeruSama23Desc:
-	db   "?@"
-
 ParkBallDesc:
 	db   "The Bug-Catching"
 	next "Contest BALL.@"
@@ -944,10 +875,6 @@ ParkBallDesc:
 RainbowWingDesc:
 	db   "A mystical feather"
 	next "of rainbow colors.@"
-
-TruthLensDesc:
-	db   "Raises accuracy"
-	next "for moves. (HOLD)@"
 
 BrickPieceDesc:
 	db   "A rare chunk of"
@@ -989,6 +916,85 @@ MirageMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
 
+SwordDesc:
+	db   "Your trusty sword!"
+	next "Very sharp.@"
+
+ClothDesc:
+	db	"Allows you to"
+	next "fly like a kite!@"
+
+FlippersDesc:
+	db   "Lets you swim in"
+	next "harsh waters.@"
+
+GauntletsDesc:
+	db   "Gloves that grants"
+	next "you strength!@"
+
+LanternDesc:
+	db   "Light areas with"
+	next "a flashy flame!@"
+
+WindWakerDesc:
+	db   "A baton that casts"
+	next "whirlpools!@"
+
+ZoraScaleDesc:
+	db   "Climb waterfalls"
+	next "like a Zora!@"
+
+HammerDesc:
+	db   "A heavy tool that"
+	next "smashes stone!@"
+
+TruthLensDesc:
+	db   "Raises accuracy"
+	next "for moves. (HOLD)@"
+
+FeatherDesc:
+	db   "Raises Speed"
+	next "for moves. (HOLD)@"
+
+BraceletDesc:
+	db   "Raises power"
+	next "of ATTACK. (HOLD)@"
+
+NecklaceDesc:
+	db   "Raises happi-"
+	next "ness. (HOLD)@"
+
+ShieldDesc:
+	db   "Raises your"
+	next "DEFENSE. (HOLD)@"
+
+TeruSama3Desc:
+	db   "?@"
+
+TeruSama4Desc:
+	db   "?@"
+
+TeruSama5Desc:
+	db   "?@"
+
+TeruSama6Desc:
+	db   "?@"
+
+TeruSama7Desc:
+	db   "?@"
+
+TeruSama8Desc:
+	db   "?@"
+
+TeruSama9Desc:
+	db   "?@"
+
+TeruSama10Desc:
+	db   "?@"
+
+TeruSama11Desc:
+	db   "?@"
+
 TeruSama25Desc:
 	db   "?@"
 
@@ -1015,27 +1021,3 @@ TeruSama32Desc:
 
 TeruSama33Desc:
 	db   "?@"
-
-ParagliderDesc:
-	db	"Allows you to"
-	next "fly like a kite!@"
-
-GauntletsDesc:
-	db   "Gloves that grants"
-	next "you strength!@"
-
-HammerDesc:
-	db   "A heavy tool that"
-	next "smashes stone!@"
-
-LanternDesc:
-	db   "Light areas with"
-	next "a flashy flame!@"
-
-WindWakerDesc:
-	db   "A baton that casts"
-	next "whirlpools!@"
-
-ZoraScaleDesc:
-	db   "Climb waterfalls"
-	next "like a Zora!@"

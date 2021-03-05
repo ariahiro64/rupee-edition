@@ -3,6 +3,7 @@ INCLUDE "data/moves/effects_pointers.asm"
 MoveEffects: ; used only for BANK(MoveEffects)
 
 NormalHit:
+AerialAce:
 	checkobedience
 	usedmovetext
 	doturn
@@ -306,6 +307,7 @@ SpeedUp2:
 	endmove
 
 SpecialAttackUp2:
+NastyPlot:
 	checkobedience
 	usedmovetext
 	doturn
@@ -972,6 +974,7 @@ DoConfuse:
 	endmove
 
 ConfuseHit:
+WaterPulse:
 	checkobedience
 	usedmovetext
 	doturn

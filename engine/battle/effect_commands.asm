@@ -1184,17 +1184,17 @@ BattleCommand_Critical:
 	push bc
 	call IsInArray
 	pop bc
-	jr nc, .ScopeLens
+	jr nc, .Hawkeye
 
 ; +2 critical level
 	inc c
 	inc c
 
-.ScopeLens:
+.Hawkeye:
 	push bc
 	call GetUserItem
 	ld a, b
-	cp HELD_CRITICAL_UP ; Increased critical chance. Only Scope Lens has this.
+	cp HELD_CRITICAL_UP ; Increased critical chance. Only Hawkeye has this.
 	pop bc
 	jr nz, .Tally
 
@@ -1739,7 +1739,7 @@ BattleCommand_CheckHit:
 	ret z
 	cp THUNDER
 	ret z
-	cp TWISTER
+	cp DRAGON_SMASH
 	ret
 
 .DigMoves:

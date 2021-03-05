@@ -70,7 +70,7 @@ MountMortarB1FPPUp:
 	itemball PP_UP
 
 MountMortarB1FHiddenMaxRevive:
-	hiddenitem MAX_REVIVE, EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE
+	hiddenitem GREAT_FAIRY, EVENT_MOUNT_MORTAR_B1F_HIDDEN_GREAT_FAIRY
 
 MountMortarB1FKiyoIntroText:
 	text "Hey!"

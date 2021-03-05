@@ -77,7 +77,7 @@ Route2HiddenFullRestore:
 	hiddenitem FULL_RESTORE, EVENT_ROUTE_2_HIDDEN_FULL_RESTORE
 
 Route2HiddenRevive:
-	hiddenitem REVIVE, EVENT_ROUTE_2_HIDDEN_REVIVE
+	hiddenitem FAIRY, EVENT_ROUTE_2_HIDDEN_FAIRY
 
 BugCatcherRobSeenText:
 	text "My bug #MON are"
