@@ -16,7 +16,6 @@ ENDM
 	command checkhit                ; 09
 	command lowersub                ; 0a
 	command moveanimnosub           ; 0b
-
 	command raisesub                ; 0c
 	command failuretext             ; 0d
 	command applydamage             ; 0e
@@ -65,7 +64,7 @@ ENDM
 	command charge                  ; 39
 	command checkcharge             ; 3a
 	command traptarget              ; 3b
-	command jumppunch               ; 3c
+	command faroreswind             ; 3c
 	command rampage                 ; 3d
 	command checkrampage            ; 3e
 	command constantdamage          ; 3f

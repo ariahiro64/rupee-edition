@@ -155,10 +155,10 @@ LizMooMooMilkGossipText:
 	text "Listen, listen!"
 
 	para "Do you know about"
-	line "MOOMOO MILK?"
+	line "LON LON MILK?"
 
 	para "You can buy it at"
-	line "MOOMOO FARM."
+	line "LON_LON FARM."
 
 	para "It's supposed to"
 	line "be good for health"

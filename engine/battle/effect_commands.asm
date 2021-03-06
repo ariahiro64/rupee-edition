@@ -196,11 +196,13 @@ CheckPlayerTurn:
 	bit FRZ, [hl]
 	jr z, .not_frozen
 
-	; Flame Wheel and Sacred Fire thaw the user.
+	; Flame Wheel, Sacred Fire, and Shadow Flare thaw the user.
 	ld a, [wCurPlayerMove]
 	cp FLAME_WHEEL
 	jr z, .not_frozen
 	cp SACRED_FIRE
+	jr z, .not_frozen
+	cp SHADOW_FLARE
 	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
@@ -428,6 +430,8 @@ CheckEnemyTurn:
 	cp FLAME_WHEEL
 	jr z, .not_frozen
 	cp SACRED_FIRE
+	jr z, .not_frozen
+	cp SHADOW_FLARE
 	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
@@ -1739,7 +1743,9 @@ BattleCommand_CheckHit:
 	ret z
 	cp THUNDER
 	ret z
-	cp DRAGON_SMASH
+	cp FARORES_WIND
+	ret z
+	cp SKY_UPPERCUT
 	ret
 
 .DigMoves:
@@ -1751,6 +1757,10 @@ BattleCommand_CheckHit:
 	cp FISSURE
 	ret z
 	cp MAGNITUDE
+	ret z
+	cp ELDINS_WRATH
+	ret z
+	cp SHADOW_FLARE
 	ret
 
 .ThunderRain:

@@ -3,8 +3,8 @@ UndergroundPath_MapScripts:
 
 	db 0 ; callbacks
 
-UndergroundPathHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_UNDERGROUND_PATH_HIDDEN_FULL_RESTORE
+UndergroundPathHiddenBluePotion:
+	hiddenitem BLUE_POTION, EVENT_UNDERGROUND_PATH_HIDDEN_BLUE_POTION
 
 UndergroundPathHiddenXSpecial:
 	hiddenitem X_SPECIAL, EVENT_UNDERGROUND_PATH_HIDDEN_X_SPECIAL
@@ -19,7 +19,7 @@ UndergroundPath_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event  3,  9, BGEVENT_ITEM, UndergroundPathHiddenFullRestore
+	bg_event  3,  9, BGEVENT_ITEM, UndergroundPathHiddenBluePotion
 	bg_event  1, 19, BGEVENT_ITEM, UndergroundPathHiddenXSpecial
 
 	db 0 ; object events

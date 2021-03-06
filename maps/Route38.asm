@@ -49,7 +49,7 @@ TrainerLassDana1:
 	iftrue .NumberAccepted
 	checkevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	iftrue .SecondTimeAsking
-	writetext LassDanaMoomooMilkText
+	writetext LassDanaLonLonMilkText
 	promptbutton
 	setevent EVENT_DANA_ASKED_FOR_PHONE_NUMBER
 	scall .AskNumber1F
@@ -376,11 +376,11 @@ LassDana1BeatenText:
 	line "battle that way."
 	done
 
-LassDanaMoomooMilkText:
+LassDanaLonLonMilkText:
 	text "I know something"
 	line "good!"
 
-	para "MOOMOO FARM's milk"
+	para "LON_LON FARM's milk"
 	line "is famous for its"
 	cont "flavor."
 	done
@@ -432,12 +432,12 @@ BeautyOliviaSeenText:
 	done
 
 BeautyOliviaBeatenText:
-	text "We drink MOOMOO"
+	text "We drink LON_LON"
 	line "MILK every day."
 	done
 
 BeautyOliviaAfterBattleText:
-	text "MOOMOO MILK is"
+	text "LON LON MILK is"
 	line "good for beauty"
 
 	para "and health, but"

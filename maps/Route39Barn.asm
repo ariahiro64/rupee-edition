@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	const ROUTE39BARN_TWIN1
 	const ROUTE39BARN_TWIN2
-	const ROUTE39BARN_MOOMOO
+	const ROUTE39BARN_LON_LON
 
 Route39Barn_MapScripts:
 	db 0 ; scene scripts
@@ -11,16 +11,16 @@ Route39Barn_MapScripts:
 Route39BarnTwin1Script:
 	faceplayer
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
+	checkevent EVENT_HEALED_LON_LON
 	iftrue .FeedingMooMoo
-	writetext Route39BarnTwinMoomooIsSickText
+	writetext Route39BarnTwinLonLonIsSickText
 	waitbutton
 	closetext
 	turnobject ROUTE39BARN_TWIN1, RIGHT
 	end
 
 .FeedingMooMoo:
-	writetext Route39BarnTwinWereFeedingMoomooText
+	writetext Route39BarnTwinWereFeedingLonLonText
 	waitbutton
 	closetext
 	turnobject ROUTE39BARN_TWIN1, RIGHT
@@ -29,31 +29,31 @@ Route39BarnTwin1Script:
 Route39BarnTwin2Script:
 	faceplayer
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
+	checkevent EVENT_HEALED_LON_LON
 	iftrue .FeedingMooMoo
-	writetext Route39BarnTwinMoomooIsSickText
+	writetext Route39BarnTwinLonLonIsSickText
 	waitbutton
 	closetext
 	turnobject ROUTE39BARN_TWIN2, LEFT
 	end
 
 .FeedingMooMoo:
-	writetext Route39BarnTwinWereFeedingMoomooText
+	writetext Route39BarnTwinWereFeedingLonLonText
 	waitbutton
 	closetext
 	turnobject ROUTE39BARN_TWIN2, LEFT
 	end
 
-MoomooScript:
+LonLonScript:
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
+	checkevent EVENT_HEALED_LON_LON
 	iftrue .HappyCow
-	writetext MoomooWeakMooText
+	writetext LonLonWeakMooText
 	setval MILTANK
 	special PlaySlowCry
 	promptbutton
 	writetext Route39BarnItsCryIsWeakText
-	checkevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO
+	checkevent EVENT_TALKED_TO_FARMER_ABOUT_LON_LON
 	iftrue .GiveBerry
 	waitbutton
 	closetext
@@ -103,7 +103,7 @@ MoomooScript:
 	writetext Route39BarnTotallyHealthyText
 	waitbutton
 	closetext
-	setevent EVENT_HEALED_MOOMOO
+	setevent EVENT_HEALED_LON_LON
 	end
 
 .NoBerriesInBag:
@@ -119,25 +119,25 @@ MoomooScript:
 	end
 
 .HappyCow:
-	writetext MoomooHappyMooText
+	writetext LonLonHappyMooText
 	cry MILTANK
 	waitbutton
 	closetext
 	end
 
-Route39BarnTwinMoomooIsSickText:
-	text "MOOMOO is sick…"
+Route39BarnTwinLonLonIsSickText:
+	text "LON_LON is sick…"
 
 	para "She needs lots of"
 	line "BERRIES."
 	done
 
-Route39BarnTwinWereFeedingMoomooText:
+Route39BarnTwinWereFeedingLonLonText:
 	text "We're feeding"
-	line "MOOMOO!"
+	line "LON_LON!"
 	done
 
-MoomooWeakMooText:
+LonLonWeakMooText:
 	text "MILTANK: …Moo…"
 	done
 
@@ -145,7 +145,7 @@ Route39BarnItsCryIsWeakText:
 	text "Its cry is weak…"
 	done
 
-MoomooHappyMooText:
+LonLonHappyMooText:
 	text "MILTANK: Mooo!"
 	done
 
@@ -200,4 +200,4 @@ Route39Barn_MapEvents:
 	db 3 ; object events
 	object_event  2,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin1Script, -1
 	object_event  4,  3, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route39BarnTwin2Script, -1
-	object_event  3,  3, SPRITE_TAUROS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoomooScript, -1
+	object_event  3,  3, SPRITE_TAUROS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LonLonScript, -1

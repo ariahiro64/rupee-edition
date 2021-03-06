@@ -9,8 +9,8 @@ TinTower5F_MapScripts:
 TinTower5FRareCandy:
 	itemball RARE_CANDY
 
-TinTower5FHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_TIN_TOWER_5F_HIDDEN_FULL_RESTORE
+TinTower5FHiddenBluePotion:
+	hiddenitem BLUE_POTION, EVENT_TIN_TOWER_5F_HIDDEN_BLUE_POTION
 
 TinTower5FHiddenCarbos:
 	hiddenitem CARBOS, EVENT_TIN_TOWER_5F_HIDDEN_CARBOS
@@ -27,7 +27,7 @@ TinTower5F_MapEvents:
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 16, 14, BGEVENT_ITEM, TinTower5FHiddenFullRestore
+	bg_event 16, 14, BGEVENT_ITEM, TinTower5FHiddenBluePotion
 	bg_event  3, 15, BGEVENT_ITEM, TinTower5FHiddenCarbos
 
 	db 1 ; object events

@@ -13,7 +13,7 @@ ItemDescriptions:
 	dw IceHealDesc
 	dw AwakeningDesc
 	dw ParlyzHealDesc
-	dw FullRestoreDesc
+	dw BluePotionDesc
 	dw MaxPotionDesc
 	dw HyperPotionDesc
 	dw SuperPotionDesc
@@ -68,7 +68,7 @@ ItemDescriptions:
 	dw MysteryEggDesc
 	dw ClearBellDesc
 	dw SilverWingDesc
-	dw MoomooMilkDesc
+	dw LonLonMilkDesc
 	dw QuickClawDesc
 	dw PsnCureBerryDesc
 	dw GoldLeafDesc
@@ -307,7 +307,7 @@ ParlyzHealDesc:
 	db   "Heals paralyzed"
 	next "#MON.@"
 
-FullRestoreDesc:
+BluePotionDesc:
 	db   "Fully restores HP"
 	next "& status.@"
 
@@ -526,7 +526,7 @@ SilverWingDesc:
 	db   "A strange, silver-"
 	next "colored feather.@"
 
-MoomooMilkDesc:
+LonLonMilkDesc:
 	db   "Restores #MON"
 	next "HP by 100.@"
 
@@ -853,8 +853,8 @@ PolkadotBowDesc:
 	next "type moves. (HOLD)@"
 
 UpGradeDesc:
-	db   "A mysterious box"
-	next "made by SILPH CO.@"
+	db   "New SILPH CO. box"
+	next "Raises ATK/DEF.@"
 
 BerryDesc:
 	db   "A self-restore"

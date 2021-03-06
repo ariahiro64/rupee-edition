@@ -26,7 +26,7 @@ ItemEffects:
 	dw StatusHealingEffect ; ICE_HEAL
 	dw StatusHealingEffect ; AWAKENING
 	dw StatusHealingEffect ; PARLYZ_HEAL
-	dw FullRestoreEffect   ; FULL_RESTORE
+	dw BluePotionEffect   ; BLUE_POTION
 	dw RestoreHPEffect     ; MAX_POTION
 	dw RestoreHPEffect     ; HYPER_POTION
 	dw RestoreHPEffect     ; SUPER_POTION
@@ -81,7 +81,7 @@ ItemEffects:
 	dw NoEffect            ; MYSTERY_EGG
 	dw NoEffect            ; CLEAR_BELL
 	dw NoEffect            ; SILVER_WING
-	dw RestoreHPEffect     ; MOOMOO_MILK
+	dw RestoreHPEffect     ; LON_LON_MILK
 	dw NoEffect            ; QUICK_CLAW
 	dw StatusHealingEffect ; PSNCUREBERRY
 	dw NoEffect            ; GOLD_LEAF
@@ -1574,7 +1574,7 @@ RevivePokemon:
 	ld a, 0
 	ret
 
-FullRestoreEffect:
+BluePotionEffect:
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
 	jp c, StatusHealer_ExitMenu
@@ -1588,10 +1588,10 @@ FullRestoreEffect:
 	jp FullyHealStatus
 
 .NotAtFullHealth:
-	call .FullRestore
+	call .BluePotion
 	jp StatusHealer_Jumptable
 
-.FullRestore:
+.BluePotion:
 	xor a
 	ld [wLowHealthAlarm], a
 	call ReviveFullHP

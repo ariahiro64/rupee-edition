@@ -41,8 +41,8 @@ MountMortar2FInsideElixer:
 MountMortar2FInsideEscapeRope:
 	itemball MOGMA_MITTS
 
-MountMortar2FInsideHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_FULL_RESTORE
+MountMortar2FInsideHiddenBluePotion:
+	hiddenitem BLUE_POTION, EVENT_MOUNT_MORTAR_2F_INSIDE_HIDDEN_BLUE_POTION
 
 SupernerdHughSeenText:
 	text "Yo! MARKUS!"
@@ -74,7 +74,7 @@ MountMortar2FInside_MapEvents:
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 24,  8, BGEVENT_ITEM, MountMortar2FInsideHiddenFullRestore
+	bg_event 24,  8, BGEVENT_ITEM, MountMortar2FInsideHiddenBluePotion
 
 	db 7 ; object events
 	object_event 28, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMortar2FInsideMaxPotion, EVENT_MOUNT_MORTAR_2F_INSIDE_MAX_POTION

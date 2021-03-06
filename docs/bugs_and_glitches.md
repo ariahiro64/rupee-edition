@@ -39,7 +39,7 @@ Some fixes are mentioned as breaking compatibility with link battles. This can b
 - [A Transformed Pokémon can use Sketch and learn otherwise unobtainable moves](#a-transformed-pokémon-can-use-sketch-and-learn-otherwise-unobtainable-moves)
 - ["Smart" AI encourages Mean Look if its own Pokémon is badly poisoned](#smart-ai-encourages-mean-look-if-its-own-pokémon-is-badly-poisoned)
 - [AI makes a false assumption about `CheckTypeMatchup`](#ai-makes-a-false-assumption-about-checktypematchup)
-- [NPC use of Full Heal or Full Restore does not cure Nightmare status](#npc-use-of-full-heal-or-full-restore-does-not-cure-nightmare-status)
+- [NPC use of Full Heal or Blue Potion does not cure Nightmare status](#npc-use-of-full-heal-or-full-restore-does-not-cure-nightmare-status)
 - [NPC use of Full Heal does not cure confusion status](#npc-use-of-full-heal-does-not-cure-confusion-status)
 - [HP bar animation is slow for high HP](#hp-bar-animation-is-slow-for-high-hp)
 - [HP bar animation off-by-one error for low HP](#hp-bar-animation-off-by-one-error-for-low-hp)
@@ -925,7 +925,7 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
 ```
 
 
-## NPC use of Full Heal or Full Restore does not cure Nightmare status
+## NPC use of Full Heal or Blue Potion does not cure Nightmare status
 
 ([Video](https://www.youtube.com/watch?v=rGqu3d3pdok&t=322))
 
@@ -958,12 +958,12 @@ This bug existed for all battles in Gold and Silver, and was only fixed for sing
 
 ## NPC use of Full Heal does not cure confusion status
 
-**Fix:** Edit `EnemyUsedFullRestore`, `EnemyUsedFullHeal`, and `AI_HealStatus` in [engine/battle/ai/items.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/ai/items.asm):
+**Fix:** Edit `EnemyUsedBluePotion`, `EnemyUsedFullHeal`, and `AI_HealStatus` in [engine/battle/ai/items.asm](https://github.com/pret/pokecrystal/blob/master/engine/battle/ai/items.asm):
 
 ```diff
- EnemyUsedFullRestore:
+ EnemyUsedBluePotion:
  	call AI_HealStatus
- 	ld a, FULL_RESTORE
+ 	ld a, BLUE_POTION
  	ld [wCurEnemyItem], a
 -	ld hl, wEnemySubStatus3
 -	res SUBSTATUS_CONFUSED, [hl]

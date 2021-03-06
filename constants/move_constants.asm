@@ -66,10 +66,10 @@
 	const ICE_BEAM     ; 3a
 	const BLIZZARD     ; 3b
 	const PSYBEAM      ; 3c
-	const WATER_PULSE  ; 3d
-	const AURORA_BEAM  ; 3e
+	const NAYRUS_PSALM ; 3d
+	const JABUS_FROST  ; 3e
 	const HYPER_BEAM   ; 3f
-	const AERIAL_ACE   ; 40
+	const FARORES_WIND ; 40
 	const DRILL_PECK   ; 41
 	const SUBMISSION   ; 42
 	const LOW_KICK     ; 43
@@ -127,7 +127,7 @@
 	const MIRROR_MOVE  ; 77
 	const SELFDESTRUCT ; 78
 	const EGG_BOMB     ; 79
-	const SHADOW_FORCE ; 7a
+	const SHADOW_FLARE ; 7a
 	const SMOG         ; 7b
 	const SLUDGE       ; 7c
 	const BONE_CLUB    ; 7d
@@ -244,7 +244,7 @@
 	const MOONLIGHT    ; ec
 	const HIDDEN_POWER ; ed
 	const CROSS_CHOP   ; ee
-	const DRAGON_SMASH ; ef
+	const ELDINS_WRATH ; ef
 	const RAIN_DANCE   ; f0
 	const SUNNY_DAY    ; f1
 	const CRUNCH       ; f2

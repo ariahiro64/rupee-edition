@@ -10,7 +10,7 @@ RooftopSaleMart1:
 RooftopSaleMart2:
 	db 5
 	dbw HYPER_POTION, 1000
-	dbw FULL_RESTORE, 2000
+	dbw BLUE_POTION, 2000
 	dbw FULL_HEAL,     500
 	dbw ULTRA_BALL,   1000
 	dbw PROTEIN,      7800

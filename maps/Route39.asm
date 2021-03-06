@@ -168,8 +168,8 @@ TrainerPokefanfJaime:
 Route39Sign:
 	jumptext Route39SignText
 
-MoomooFarmSign:
-	jumptext MoomooFarmSignText
+LonLonFarmSign:
+	jumptext LonLonFarmSignText
 
 Route39TrainerTips:
 	jumptext Route39TrainerTipsText
@@ -319,8 +319,8 @@ Route39SignText:
 	line "ECRUTEAK CITY"
 	done
 
-MoomooFarmSignText:
-	text "MOOMOO FARM"
+LonLonFarmSignText:
+	text "LON_LON FARM"
 
 	para "Enjoy Our Fresh"
 	line "and Tasty Milk"
@@ -352,7 +352,7 @@ Route39_MapEvents:
 
 	db 4 ; bg events
 	bg_event  5, 31, BGEVENT_READ, Route39TrainerTips
-	bg_event  9,  5, BGEVENT_READ, MoomooFarmSign
+	bg_event  9,  5, BGEVENT_READ, LonLonFarmSign
 	bg_event 15,  7, BGEVENT_READ, Route39Sign
 	bg_event  5, 13, BGEVENT_ITEM, Route39HiddenNugget
 

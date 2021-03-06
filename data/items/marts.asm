@@ -179,7 +179,7 @@ MartGoldenrod5F:
 	db TM_PSYCHIC_M
 	db TM_THIEF
 	db TM_GILDED_SLASH
-	db TM_AERIAL_ACE
+	db TM_FARORES_WIND
 	db -1 ; end
 
 MartOlivine:
@@ -374,7 +374,7 @@ MartCeladon3F:
 	db TM_PSYCHIC_M
 	db TM_THIEF
 	db TM_GILDED_SLASH
-	db TM_AERIAL_ACE
+	db TM_FARORES_WIND
 	db -1 ; end
 
 MartCeladon4F:
@@ -469,7 +469,7 @@ MartIndigoPlateau:
 	db MAX_REPEL
 	db HYPER_POTION
 	db MAX_POTION
-	db FULL_RESTORE
+	db BLUE_POTION
 	db ETHER
 	db MAX_ETHER
 	db FAIRY

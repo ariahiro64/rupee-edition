@@ -1755,7 +1755,7 @@ TryCutOW::
 	ld [wCurItem], a
 	ld hl, wNumKeyItems
 	call CheckItem
-	jr c, .cant_cut
+	jr nc, .cant_cut
 
 	ld a, BANK(AskCutScript)
 	ld hl, AskCutScript

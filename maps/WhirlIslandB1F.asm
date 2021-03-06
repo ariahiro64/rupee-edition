@@ -11,8 +11,8 @@ WhirlIslandB1F_MapScripts:
 
 	db 0 ; callbacks
 
-WhirlIslandB1FFullRestore:
-	itemball FULL_RESTORE
+WhirlIslandB1FBluePotion:
+	itemball BLUE_POTION
 
 WhirlIslandB1FCarbos:
 	itemball CARBOS
@@ -35,8 +35,8 @@ WhirlIslandB1FHiddenRareCandy:
 WhirlIslandB1FHiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_WHIRL_ISLAND_B1F_HIDDEN_ULTRA_BALL
 
-WhirlIslandB1FHiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE
+WhirlIslandB1FHiddenBluePotion:
+	hiddenitem BLUE_POTION, EVENT_WHIRL_ISLAND_B1F_HIDDEN_BLUE_POTION
 
 WhirlIslandB1F_MapEvents:
 	db 0, 0 ; filler
@@ -57,10 +57,10 @@ WhirlIslandB1F_MapEvents:
 	db 3 ; bg events
 	bg_event 30,  4, BGEVENT_ITEM, WhirlIslandB1FHiddenRareCandy
 	bg_event 36, 18, BGEVENT_ITEM, WhirlIslandB1FHiddenUltraBall
-	bg_event  2, 23, BGEVENT_ITEM, WhirlIslandB1FHiddenFullRestore
+	bg_event  2, 23, BGEVENT_ITEM, WhirlIslandB1FHiddenBluePotion
 
 	db 6 ; object events
-	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FFullRestore, EVENT_WHIRL_ISLAND_B1F_FULL_RESTORE
+	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FBluePotion, EVENT_WHIRL_ISLAND_B1F_BLUE_POTION
 	object_event  2, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FCarbos, EVENT_WHIRL_ISLAND_B1F_CARBOS
 	object_event 33, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FCalcium, EVENT_WHIRL_ISLAND_B1F_CALCIUM
 	object_event 17,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB1FNugget, EVENT_WHIRL_ISLAND_B1F_NUGGET

@@ -468,7 +468,7 @@ UseItem:
 .Field:
 	call DoItemEffect
 	ld a, [wItemEffectSucceeded]
-  and a
+    and a
 
 	; grab and reset wUsingHMItem without changing flag
 	ld hl, wUsingHMItem

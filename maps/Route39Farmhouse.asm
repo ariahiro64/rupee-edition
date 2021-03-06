@@ -12,16 +12,16 @@ Route39Farmhouse_MapScripts:
 PokefanM_DairyFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_HEALED_MOOMOO
+	checkevent EVENT_HEALED_LON_LON
 	iftrue FarmerMScript_SellMilk
 	writetext FarmerMText_SickCow
 	waitbutton
 	closetext
-	setevent EVENT_TALKED_TO_FARMER_ABOUT_MOOMOO
+	setevent EVENT_TALKED_TO_FARMER_ABOUT_LON_LON
 	end
 
 FarmerMScript_SellMilk:
-	checkitem MOOMOO_MILK
+	checkitem LON_LON_MILK
 	iftrue FarmerMScript_Milking
 	writetext FarmerMText_BuyMilk
 	special PlaceMoneyTopRight
@@ -29,7 +29,7 @@ FarmerMScript_SellMilk:
 	iffalse FarmerMScript_NoSale
 	checkmoney YOUR_MONEY, ROUTE39FARMHOUSE_MILK_PRICE
 	ifequal HAVE_LESS, FarmerMScript_NoMoney
-	giveitem MOOMOO_MILK
+	giveitem LON_LON_MILK
 	iffalse FarmerMScript_NoRoom
 	takemoney YOUR_MONEY, ROUTE39FARMHOUSE_MILK_PRICE
 	special PlaceMoneyTopRight
@@ -68,9 +68,9 @@ FarmerMScript_Milking:
 PokefanF_SnoreFarmer:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM13_AERIAL_ACE_FROM_MOOMOO_FARM
+	checkevent EVENT_GOT_TM13_FARORES_WIND_FROM_LON_LON_FARM
 	iftrue FarmerFScript_GotSnore
-	checkevent EVENT_HEALED_MOOMOO
+	checkevent EVENT_HEALED_LON_LON
 	iftrue FarmerFScript_GiveSnore
 	writetext FarmerFText_InTrouble
 	waitbutton
@@ -80,9 +80,9 @@ PokefanF_SnoreFarmer:
 FarmerFScript_GiveSnore:
 	writetext FarmerFText_HealedMiltank
 	promptbutton
-	verbosegiveitem TM_AERIAL_ACE
+	verbosegiveitem TM_FARORES_WIND
 	iffalse FarmerFScript_NoRoomForSnore
-	setevent EVENT_GOT_TM13_AERIAL_ACE_FROM_MOOMOO_FARM
+	setevent EVENT_GOT_TM13_FARORES_WIND_FROM_LON_LON_FARM
 FarmerFScript_GotSnore:
 	writetext FarmerFText_SnoreSpeech
 	waitbutton
@@ -113,7 +113,7 @@ FarmerMText_SickCow:
 
 FarmerMText_BuyMilk:
 	text "How'd you like my"
-	line "MOOMOO MILK?"
+	line "LON LON MILK?"
 
 	para "It's my pride and"
 	line "joy, there."
@@ -165,7 +165,7 @@ FarmerFText_HealedMiltank:
 	text "You fixed our"
 	line "MILTANK, hon. Now"
 
-	para "it gives MOOMOO"
+	para "it gives LON_LON"
 	line "MILK again."
 
 	para "Here's somethin'"
@@ -179,7 +179,7 @@ Text_ReceivedTM13:
 
 FarmerFText_SnoreSpeech:
 	text "That there's"
-	line "AERIAL_ACE."
+	line "FARORES_WIND."
 
 	para "Doesn't seem much"
 	line "but it never misses"

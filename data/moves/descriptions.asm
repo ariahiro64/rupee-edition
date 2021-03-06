@@ -60,10 +60,10 @@ MoveDescriptions::
 	dw IceBeamDescription
 	dw BlizzardDescription
 	dw PsybeamDescription
-	dw WaterPulseDescription
-	dw AuroraBeamDescription
+	dw NayrusPsalmDescription
+	dw JabusFrostDescription
 	dw HyperBeamDescription
-	dw AerialAceDescription
+	dw FaroresWindDescription
 	dw DrillPeckDescription
 	dw SubmissionDescription
 	dw LowKickDescription
@@ -121,7 +121,7 @@ MoveDescriptions::
 	dw MirrorMoveDescription
 	dw SelfdestructDescription
 	dw EggBombDescription
-	dw ShadowForceDescription
+	dw ShadowFlareDescription
 	dw SmogDescription
 	dw SludgeDescription
 	dw BoneClubDescription
@@ -238,7 +238,7 @@ MoveDescriptions::
 	dw MoonlightDescription
 	dw HiddenPowerDescription
 	dw CrossChopDescription
-	dw DragonSmashDescription
+	dw EldinsWrathDescription
 	dw RainDanceDescription
 	dw SunnyDayDescription
 	dw CrunchDescription
@@ -504,20 +504,20 @@ PsybeamDescription:
 	db   "An attack that may"
 	next "confuse the foe.@"
 
-WaterPulseDescription:
+NayrusPsalmDescription:
 	db   "Wet pulse that may"
 	next "confuse the foe.@"
 
-AuroraBeamDescription:
-	db   "An attack that may"
-	next "lower ATTACK.@"
+JabusFrostDescription:
+	db   "Harsh Freeze that"
+	next "lowers SP. DEF.@"
 
 HyperBeamDescription:
 	db   "1st turn: Attack"
 	next "2nd turn: Rest@"
 
-AerialAceDescription:
-	db   "Aerial slash that"
+FaroresWindDescription:
+	db   "Strong Wind that"
 	next "never misses.@"
 
 DrillPeckDescription:
@@ -748,7 +748,7 @@ EggBombDescription:
 	db   "Eggs are hurled at"
 	next "the foe.@"
 
-ShadowForceDescription:
+ShadowFlareDescription:
 	db   "1st turn: Disappear"
 	next "2nd turn: Unleash@"
 
@@ -1216,7 +1216,7 @@ CrossChopDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
-DragonSmashDescription:
+EldinsWrathDescription:
 	db   "Fierce Rampage that"
 	next "hurts the user.@"
 

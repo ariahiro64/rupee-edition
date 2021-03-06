@@ -10,8 +10,8 @@ SilverCaveItemRooms_MapScripts:
 SilverCaveItemRoomsMaxRevive:
 	itemball GREAT_FAIRY
 
-SilverCaveItemRoomsFullRestore:
-	itemball FULL_RESTORE
+SilverCaveItemRoomsBluePotion:
+	itemball BLUE_POTION
 
 SilverCaveItemRooms_MapEvents:
 	db 0, 0 ; filler
@@ -26,4 +26,4 @@ SilverCaveItemRooms_MapEvents:
 
 	db 2 ; object events
 	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsMaxRevive, EVENT_SILVER_CAVE_ITEM_ROOMS_GREAT_FAIRY
-	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsFullRestore, EVENT_SILVER_CAVE_ITEM_ROOMS_FULL_RESTORE
+	object_event 15, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SilverCaveItemRoomsBluePotion, EVENT_SILVER_CAVE_ITEM_ROOMS_BLUE_POTION

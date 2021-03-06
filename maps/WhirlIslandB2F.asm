@@ -8,8 +8,8 @@ WhirlIslandB2F_MapScripts:
 
 	db 0 ; callbacks
 
-WhirlIslandB2FFullRestore:
-	itemball FULL_RESTORE
+WhirlIslandB2FBluePotion:
+	itemball BLUE_POTION
 
 WhirlIslandB2FMaxRevive:
 	itemball GREAT_FAIRY
@@ -31,6 +31,6 @@ WhirlIslandB2F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event 10, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FFullRestore, EVENT_WHIRL_ISLAND_B2F_FULL_RESTORE
+	object_event 10, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FBluePotion, EVENT_WHIRL_ISLAND_B2F_BLUE_POTION
 	object_event  6,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FMaxRevive, EVENT_WHIRL_ISLAND_B2F_GREAT_FAIRY
 	object_event  5, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, WhirlIslandB2FMaxElixer, EVENT_WHIRL_ISLAND_B2F_MAX_ELIXER

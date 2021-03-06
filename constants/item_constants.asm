@@ -19,7 +19,7 @@
 	const ICE_HEAL     ; 0b
 	const AWAKENING    ; 0c
 	const PARLYZ_HEAL  ; 0d
-	const FULL_RESTORE ; 0e
+	const BLUE_POTION ; 0e
 	const MAX_POTION   ; 0f
 	const HYPER_POTION ; 10
 	const SUPER_POTION ; 11
@@ -74,7 +74,7 @@
 	const MYSTERY_EGG  ; 42
 	const CLEAR_BELL   ; 43
 	const SILVER_WING  ; 44
-	const MOOMOO_MILK  ; 45
+	const LON_LON_MILK  ; 45
 	const QUICK_CLAW   ; 46
 	const PSNCUREBERRY ; 47
 	const GOLD_LEAF    ; 48
@@ -234,7 +234,7 @@ ENDM
 	add_tm HIDDEN_POWER ; c9
 	add_tm SUNNY_DAY    ; ca
 	add_tm SWEET_SCENT  ; cb
-	add_tm AERIAL_ACE   ; cc
+	add_tm FARORES_WIND ; cc
 	add_tm BLIZZARD     ; cd
 	add_tm HYPER_BEAM   ; ce
 	add_tm ICY_WIND     ; cf

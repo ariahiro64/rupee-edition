@@ -1200,9 +1200,6 @@ JohtoGrassWildMons:
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, HOPPIP
-	db 3, CHIKORITA
-	db 3, CYNDAQUIL
-	db 3, TOTODILE
 	; day
 	db 2, PIDGEY
 	db 2, SENTRET
@@ -1211,9 +1208,6 @@ JohtoGrassWildMons:
 	db 2, RATTATA
 	db 3, HOPPIP
 	db 3, HOPPIP
-	db 3, CHIKORITA
-	db 3, CYNDAQUIL
-	db 3, TOTODILE
 	; nite
 	db 2, HOOTHOOT
 	db 2, RATTATA
@@ -1222,9 +1216,6 @@ JohtoGrassWildMons:
 	db 2, RATTATA
 	db 3, HOOTHOOT
 	db 3, HOOTHOOT
-	db 3, CHIKORITA
-	db 3, CYNDAQUIL
-	db 3, TOTODILE
 
 	map_id ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1236,9 +1227,6 @@ JohtoGrassWildMons:
 	db 3, WEEDLE
 	db 4, HOPPIP
 	db 4, HOPPIP
-	db 4, CHIKORITA
-	db 4, CYNDAQUIL
-	db 4, TOTODILE
 	; day
 	db 3, PIDGEY
 	db 3, CATERPIE
@@ -1247,9 +1235,6 @@ JohtoGrassWildMons:
 	db 3, WEEDLE
 	db 4, HOPPIP
 	db 4, HOPPIP
-	db 4, CHIKORITA
-	db 4, CYNDAQUIL
-	db 4, TOTODILE
 	; nite
 	db 3, SPINARAK
 	db 3, HOOTHOOT
@@ -1258,9 +1243,6 @@ JohtoGrassWildMons:
 	db 3, ZUBAT
 	db 4, HOOTHOOT
 	db 4, HOOTHOOT
-	db 4, CHIKORITA
-	db 4, CYNDAQUIL
-	db 4, TOTODILE
 
 	map_id ROUTE_31
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1272,9 +1254,6 @@ JohtoGrassWildMons:
 	db 4, WEEDLE
 	db 5, HOPPIP
 	db 5, HOPPIP
-	db 5, CHIKORITA
-	db 5, CYNDAQUIL
-	db 5, TOTODILE
 	; day
 	db 4, PIDGEY
 	db 4, CATERPIE
@@ -1283,9 +1262,6 @@ JohtoGrassWildMons:
 	db 4, WEEDLE
 	db 5, HOPPIP
 	db 5, HOPPIP
-	db 5, CHIKORITA
-	db 5, CYNDAQUIL
-	db 5, TOTODILE
 	; nite
 	db 4, SPINARAK
 	db 4, POLIWAG
@@ -1294,9 +1270,6 @@ JohtoGrassWildMons:
 	db 4, ZUBAT
 	db 5, GASTLY
 	db 5, GASTLY
-	db 5, CHIKORITA
-	db 5, CYNDAQUIL
-	db 5, TOTODILE
 
 	map_id ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

@@ -184,7 +184,7 @@ GrowlitheEggMoves:
 PoliwagEggMoves:
 	db MIST
 	db SPLASH
-	db WATER_PULSE
+	db NAYRUS_PSALM
 	db HAZE
 	db MIND_READER
 	db -1 ; end
@@ -211,7 +211,7 @@ BellsproutEggMoves:
 	db -1 ; end
 
 TentacoolEggMoves:
-	db AURORA_BEAM
+	db JABUS_FROST
 	db MIRROR_COAT
 	db RAPID_SPIN
 	db HAZE
@@ -256,10 +256,10 @@ DoduoEggMoves:
 	db -1 ; end
 
 SeelEggMoves:
-	db SHADOW_FORCE
+	db SHADOW_FLARE
 	db PERISH_SONG
 	db DISABLE
-	db AERIAL_ACE
+	db FARORES_WIND
 	db SLAM
 	db ENCORE
 	db -1 ; end
@@ -267,11 +267,11 @@ SeelEggMoves:
 GrimerEggMoves:
 	db HAZE
 	db MEAN_LOOK
-	db SHADOW_FORCE
+	db SHADOW_FLARE
 	db -1 ; end
 
 ShellderEggMoves:
-	db WATER_PULSE
+	db NAYRUS_PSALM
 	db TAKE_DOWN
 	db BARRIER
 	db RAPID_SPIN
@@ -368,7 +368,7 @@ KangaskhanEggMoves:
 
 HorseaEggMoves:
 	db FLAIL
-	db AURORA_BEAM
+	db JABUS_FROST
 	db OCTAZOOKA
 	db DISABLE
 	db SPLASH
@@ -402,7 +402,7 @@ PinsirEggMoves:
 	db -1 ; end
 
 LaprasEggMoves:
-	db AURORA_BEAM
+	db JABUS_FROST
 	db FORESIGHT
 	db -1 ; end
 
@@ -412,16 +412,16 @@ EeveeEggMoves:
 	db -1 ; end
 
 OmanyteEggMoves:
-	db WATER_PULSE
-	db AURORA_BEAM
+	db NAYRUS_PSALM
+	db JABUS_FROST
 	db SLAM
 	db SUPERSONIC
 	db HAZE
 	db -1 ; end
 
 KabutoEggMoves:
-	db WATER_PULSE
-	db AURORA_BEAM
+	db NAYRUS_PSALM
+	db JABUS_FROST
 	db RAPID_SPIN
 	db DIG
 	db FLAIL
@@ -434,7 +434,7 @@ AerodactylEggMoves:
 	db -1 ; end
 
 SnorlaxEggMoves:
-	db SHADOW_FORCE
+	db SHADOW_FLARE
 	db -1 ; end
 
 DratiniEggMoves:
@@ -534,7 +534,7 @@ IgglybuffEggMoves:
 TogepiEggMoves:
 	db PRESENT
 	db MIRROR_MOVE
-	db AERIAL_ACE
+	db FARORES_WIND
 	db FORESIGHT
 	db FUTURE_SIGHT
 	db -1 ; end
@@ -655,14 +655,14 @@ SnubbullEggMoves:
 	db PRESENT
 	db CRUNCH
 	db HEAL_BELL
-	db SHADOW_FORCE
+	db SHADOW_FLARE
 	db LEER
 	db -1 ; end
 
 QwilfishEggMoves:
 	db FLAIL
 	db HAZE
-	db WATER_PULSE
+	db NAYRUS_PSALM
 	db SUPERSONIC
 	db -1 ; end
 
@@ -714,7 +714,7 @@ CorsolaEggMoves:
 	db -1 ; end
 
 RemoraidEggMoves:
-	db AURORA_BEAM
+	db JABUS_FROST
 	db OCTAZOOKA
 	db SUPERSONIC
 	db HAZE
@@ -722,7 +722,7 @@ RemoraidEggMoves:
 	db -1 ; end
 
 DelibirdEggMoves:
-	db AURORA_BEAM
+	db JABUS_FROST
 	db QUICK_ATTACK
 	db FUTURE_SIGHT
 	db SPLASH
@@ -730,7 +730,7 @@ DelibirdEggMoves:
 	db -1 ; end
 
 MantineEggMoves:
-	db DRAGON_SMASH
+	db ELDINS_WRATH
 	db HYDRO_PUMP
 	db HAZE
 	db SLAM
@@ -774,9 +774,9 @@ TyrogueEggMoves:
 	db MACH_PUNCH
 	db MIND_READER
 	db GILDED_SLASH
-	db AERIAL_ACE
-	db DRAGON_SMASH
-	db SHADOW_FORCE
+	db FARORES_WIND
+	db ELDINS_WRATH
+	db SHADOW_FLARE
 	db SKY_UPPERCUT
 	db -1 ; end
 

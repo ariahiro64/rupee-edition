@@ -293,7 +293,7 @@ RaticateEvosAttacks:
 SpearowEvosAttacks:
 	db EVOLVE_LEVEL, 20, FEAROW
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, GROWL
 	db 7, LEER
 	db 13, FURY_ATTACK
@@ -305,7 +305,7 @@ SpearowEvosAttacks:
 
 FearowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, GROWL
 	db 1, LEER
 	db 1, FURY_ATTACK
@@ -964,7 +964,7 @@ TentacoolEvosAttacks:
 	db 6, SUPERSONIC
 	db 12, NASTY_PLOT
 	db 19, ACID
-	db 25, WATER_PULSE
+	db 25, NAYRUS_PSALM
 	db 30, WRAP
 	db 36, BARRIER
 	db 43, SCREECH
@@ -979,7 +979,7 @@ TentacruelEvosAttacks:
 	db 6, SUPERSONIC
 	db 12, NASTY_PLOT
 	db 19, ACID
-	db 25, WATER_PULSE
+	db 25, NAYRUS_PSALM
 	db 30, WRAP
 	db 38, BARRIER
 	db 47, SCREECH
@@ -1131,7 +1131,7 @@ MagnetonEvosAttacks:
 
 FarfetchDEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, GILDED_SLASH
 	db 7, SAND_ATTACK
 	db 13, LEER
@@ -1141,14 +1141,14 @@ FarfetchDEvosAttacks:
 	db 37, SLASH
 	db 44, FALSE_SWIPE
 	db 52, SILVER_WIND
-	db 61, AERIAL_ACE
+	db 61, FARORES_WIND
 	db 71, GILDED_SLASH
 	db 0 ; no more level-up moves
 
 DoduoEvosAttacks:
 	db EVOLVE_LEVEL, 31, DODRIO
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, GROWL
 	db 9, PURSUIT
 	db 13, FURY_ATTACK
@@ -1160,7 +1160,7 @@ DoduoEvosAttacks:
 
 DodrioEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, GROWL
 	db 1, PURSUIT
 	db 1, FURY_ATTACK
@@ -1177,7 +1177,7 @@ SeelEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 5, GROWL
-	db 16, AURORA_BEAM
+	db 16, JABUS_FROST
 	db 21, REST
 	db 32, TAKE_DOWN
 	db 37, ICE_BEAM
@@ -1188,9 +1188,9 @@ DewgongEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HEADBUTT
 	db 1, GROWL
-	db 1, AURORA_BEAM
+	db 1, JABUS_FROST
 	db 5, GROWL
-	db 16, AURORA_BEAM
+	db 16, JABUS_FROST
 	db 21, REST
 	db 32, TAKE_DOWN
 	db 43, ICE_BEAM
@@ -1232,7 +1232,7 @@ ShellderEvosAttacks:
 	db 1, TACKLE
 	db 1, WITHDRAW
 	db 9, SUPERSONIC
-	db 17, AURORA_BEAM
+	db 17, JABUS_FROST
 	db 25, PROTECT
 	db 33, LEER
 	db 41, CLAMP
@@ -1243,7 +1243,7 @@ CloysterEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WITHDRAW
 	db 1, SUPERSONIC
-	db 1, AURORA_BEAM
+	db 1, JABUS_FROST
 	db 1, PROTECT
 	db 33, SPIKES
 	db 41, SPIKE_CANNON
@@ -1253,7 +1253,7 @@ GastlyEvosAttacks:
 	db EVOLVE_LEVEL, 25, HAUNTER
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 8, SPITE
 	db 13, MEAN_LOOK
 	db 16, CURSE
@@ -1264,14 +1264,14 @@ GastlyEvosAttacks:
 	db 41, SHADOW_BALL
 	db 48, GILDED_SLASH
 	db 53, NASTY_PLOT
-	db 56, SHADOW_FORCE
+	db 56, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 HaunterEvosAttacks:
 	db EVOLVE_LEVEL, 30, GENGAR
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 1, SPITE
 	db 8, SPITE
 	db 13, MEAN_LOOK
@@ -1283,19 +1283,19 @@ HaunterEvosAttacks:
 	db 56, SILVER_WIND
 	db 65, GILDED_SLASH
 	db 73, SWORDS_DANCE
-	db 82, DRAGON_SMASH
-	db 90, SHADOW_FORCE
+	db 82, ELDINS_WRATH
+	db 90, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 GengarEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 1, SPITE
 	db 1, SILVER_WIND
 	db 1, GILDED_SLASH
 	db 1, SWORDS_DANCE
-	db 1, DRAGON_SMASH
+	db 1, ELDINS_WRATH
 	db 8, SPITE
 	db 13, MEAN_LOOK
 	db 16, CURSE
@@ -1308,8 +1308,8 @@ GengarEvosAttacks:
 	db 65, SWORDS_DANCE
 	db 73, PSYCHIC_M
 	db 82, GILDED_SLASH
-	db 90, DRAGON_SMASH
-	db 99, SHADOW_FORCE
+	db 90, ELDINS_WRATH
+	db 99, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 OnixEvosAttacks:
@@ -1496,9 +1496,9 @@ HitmonleeEvosAttacks:
 	db 46, SKY_UPPERCUT
 	db 51, REVERSAL
 	db 56, GILDED_SLASH
-	db 61, AERIAL_ACE
-	db 66, DRAGON_SMASH
-	db 71, SHADOW_FORCE
+	db 61, FARORES_WIND
+	db 66, ELDINS_WRATH
+	db 71, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 HitmonchanEvosAttacks:
@@ -1523,14 +1523,14 @@ HitmonchanEvosAttacks:
 	db 44, DETECT
 	db 50, COUNTER
 	db 56, GILDED_SLASH
-	db 62, AERIAL_ACE
-	db 68, DRAGON_SMASH
-	db 74, SHADOW_FORCE
+	db 62, FARORES_WIND
+	db 68, ELDINS_WRATH
+	db 74, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 LickitungEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 7, SUPERSONIC
 	db 13, DEFENSE_CURL
 	db 19, STOMP
@@ -1646,7 +1646,7 @@ HorseaEvosAttacks:
 	db 8, SMOKESCREEN
 	db 15, LEER
 	db 22, WATER_GUN
-	db 29, DRAGON_SMASH
+	db 29, ELDINS_WRATH
 	db 36, AGILITY
 	db 43, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -1662,7 +1662,7 @@ SeadraEvosAttacks:
 	db 15, LEER
 	db 22, WATER_GUN
 	db 25, ICE_BEAM
-	db 29, DRAGON_SMASH
+	db 29, ELDINS_WRATH
 	db 40, AGILITY
 	db 51, HYDRO_PUMP
 	db 0 ; no more level-up moves
@@ -1670,7 +1670,7 @@ SeadraEvosAttacks:
 GoldeenEvosAttacks:
 	db EVOLVE_LEVEL, 33, SEAKING
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, TAIL_WHIP
 	db 10, SUPERSONIC
 	db 15, HORN_ATTACK
@@ -1683,7 +1683,7 @@ GoldeenEvosAttacks:
 
 SeakingEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, TAIL_WHIP
 	db 1, TAIL_WHIP
 	db 10, SUPERSONIC
@@ -1704,7 +1704,7 @@ StaryuEvosAttacks:
 	db 13, RAPID_SPIN
 	db 19, RECOVER
 	db 25, SWIFT
-	db 31, WATER_PULSE
+	db 31, NAYRUS_PSALM
 	db 37, MINIMIZE
 	db 43, LIGHT_SCREEN
 	db 50, HYDRO_PUMP
@@ -1715,7 +1715,7 @@ StarmieEvosAttacks:
 	db 1, TACKLE
 	db 1, RAPID_SPIN
 	db 1, RECOVER
-	db 1, WATER_PULSE
+	db 1, NAYRUS_PSALM
 	db 37, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
@@ -1752,7 +1752,7 @@ ScytherEvosAttacks:
 JynxEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POUND
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 1, LOVELY_KISS
 	db 1, POWDER_SNOW
 	db 9, LOVELY_KISS
@@ -1834,7 +1834,7 @@ GyaradosEvosAttacks:
 	db 20, BITE
 	db 25, DRAGONBREATH
 	db 30, LEER
-	db 35, DRAGON_SMASH
+	db 35, ELDINS_WRATH
 	db 40, HYDRO_PUMP
 	db 45, RAIN_DANCE
 	db 50, HYPER_BEAM
@@ -1889,7 +1889,7 @@ VaporeonEvosAttacks:
 	db 16, WATER_GUN
 	db 23, QUICK_ATTACK
 	db 30, BITE
-	db 36, AURORA_BEAM
+	db 36, JABUS_FROST
 	db 42, HAZE
 	db 47, ACID_ARMOR
 	db 52, HYDRO_PUMP
@@ -2041,7 +2041,7 @@ ArticunoEvosAttacks:
 
 ZapdosEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, THUNDERSHOCK
 	db 13, THUNDER_WAVE
 	db 25, AGILITY
@@ -2072,7 +2072,7 @@ DratiniEvosAttacks:
 	db 1, LEER
 	db 1, EXTREMESPEED
 	db 1, HYDRO_PUMP
-	db 1, WATER_PULSE
+	db 1, NAYRUS_PSALM
 	db 1, WATER_GUN
 	db 1, HAZE
 	db 1, MIST
@@ -2080,7 +2080,7 @@ DratiniEvosAttacks:
 	db 1, HORN_DRILL
 	db 8, THUNDER_WAVE
 	db 10, DRAGON_RAGE
-	db 15, DRAGON_SMASH
+	db 15, ELDINS_WRATH
 	db 22, GROWTH
 	db 29, SLAM
 	db 36, AGILITY
@@ -2098,17 +2098,17 @@ DragonairEvosAttacks:
 	db 1, LEER
 	db 1, EXTREMESPEED
 	db 1, HYDRO_PUMP
-	db 1, WATER_PULSE
+	db 1, NAYRUS_PSALM
 	db 1, WATER_GUN
 	db 1, HAZE
 	db 1, MIST
 	db 1, SUPERSONIC
 	db 1, HORN_DRILL
 	db 1, THUNDER_WAVE
-	db 1, DRAGON_SMASH
+	db 1, ELDINS_WRATH
 	db 8, THUNDER_WAVE
 	db 10, DRAGON_RAGE
-	db 15, DRAGON_SMASH
+	db 15, ELDINS_WRATH
 	db 22, GROWTH
 	db 29, SLAM
 	db 35, GROWTH
@@ -2126,17 +2126,17 @@ DragoniteEvosAttacks:
 	db 1, LEER
 	db 1, EXTREMESPEED
 	db 1, HYDRO_PUMP
-	db 1, WATER_PULSE
+	db 1, NAYRUS_PSALM
 	db 1, WATER_GUN
 	db 1, HAZE
 	db 1, MIST
 	db 1, SUPERSONIC
 	db 1, HORN_DRILL
 	db 1, THUNDER_WAVE
-	db 1, DRAGON_SMASH
+	db 1, ELDINS_WRATH
 	db 8, THUNDER_WAVE
 	db 10, DRAGON_RAGE
-	db 15, DRAGON_SMASH
+	db 15, ELDINS_WRATH
 	db 22, GROWTH
 	db 29, SLAM
 	db 35, SHARPEN
@@ -2153,11 +2153,11 @@ MewtwoEvosAttacks:
 	db 1, DISABLE
 	db 1, SUBMISSION
 	db 1, SKY_UPPERCUT
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 1, GILDED_SLASH
 	db 1, NASTY_PLOT
 	db 1, SILVER_WIND
-	db 1, DRAGON_SMASH
+	db 1, ELDINS_WRATH
 	db 1, SAFEGUARD
 	db 1, FUTURE_SIGHT
 	db 11, BARRIER
@@ -2168,7 +2168,7 @@ MewtwoEvosAttacks:
 	db 66, PSYCHIC_M
 	db 77, AMNESIA
 	db 88, RECOVER
-	db 99, SHADOW_FORCE
+	db 99, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 MewEvosAttacks:
@@ -2182,8 +2182,8 @@ MewEvosAttacks:
 	db 60, SILVER_WIND
 	db 70, NASTY_PLOT
 	db 80, GILDED_SLASH
-	db 90, DRAGON_SMASH
-	db 100, SHADOW_FORCE
+	db 90, ELDINS_WRATH
+	db 100, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 ChikoritaEvosAttacks:
@@ -2350,7 +2350,7 @@ HoothootEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 6, FORESIGHT
-	db 11, AERIAL_ACE
+	db 11, FARORES_WIND
 	db 16, HYPNOSIS
 	db 22, REFLECT
 	db 28, TAKE_DOWN
@@ -2363,9 +2363,9 @@ NoctowlEvosAttacks:
 	db 1, TACKLE
 	db 1, GROWL
 	db 1, FORESIGHT
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 6, FORESIGHT
-	db 11, AERIAL_ACE
+	db 11, FARORES_WIND
 	db 16, HYPNOSIS
 	db 25, REFLECT
 	db 33, TAKE_DOWN
@@ -2536,7 +2536,7 @@ TogeticEvosAttacks:
 NatuEvosAttacks:
 	db EVOLVE_LEVEL, 25, XATU
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, LEER
 	db 10, NIGHT_SHADE
 	db 20, TELEPORT
@@ -2547,7 +2547,7 @@ NatuEvosAttacks:
 
 XatuEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 1, LEER
 	db 1, NIGHT_SHADE
 	db 10, NIGHT_SHADE
@@ -2613,7 +2613,7 @@ MarillEvosAttacks:
 	db 6, TAIL_WHIP
 	db 10, WATER_GUN
 	db 15, ROLLOUT
-	db 21, WATER_PULSE
+	db 21, NAYRUS_PSALM
 	db 28, DOUBLE_EDGE
 	db 36, RAIN_DANCE
 	db 0 ; no more level-up moves
@@ -2628,7 +2628,7 @@ AzumarillEvosAttacks:
 	db 6, TAIL_WHIP
 	db 10, WATER_GUN
 	db 15, ROLLOUT
-	db 25, WATER_PULSE
+	db 25, NAYRUS_PSALM
 	db 36, DOUBLE_EDGE
 	db 48, RAIN_DANCE
 	db 0 ; no more level-up moves
@@ -2813,7 +2813,7 @@ UmbreonEvosAttacks:
 
 MurkrowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 11, PURSUIT
 	db 16, HAZE
 	db 26, NIGHT_SHADE
@@ -2906,7 +2906,7 @@ ForretressEvosAttacks:
 	db 69, SILVER_WIND
 	db 79, SKY_UPPERCUT
 	db 89, GILDED_SLASH
-	db 99, DRAGON_SMASH
+	db 99, ELDINS_WRATH
 	db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:
@@ -2956,7 +2956,7 @@ SnubbullEvosAttacks:
 	db 4, TAIL_WHIP
 	db 8, CHARM
 	db 13, BITE
-	db 19, SHADOW_FORCE
+	db 19, SHADOW_FLARE
 	db 26, ROAR
 	db 34, RAGE
 	db 43, TAKE_DOWN
@@ -2969,7 +2969,7 @@ GranbullEvosAttacks:
 	db 4, TAIL_WHIP
 	db 8, CHARM
 	db 13, BITE
-	db 19, SHADOW_FORCE
+	db 19, SHADOW_FLARE
 	db 28, ROAR
 	db 38, RAGE
 	db 51, TAKE_DOWN
@@ -3053,7 +3053,7 @@ TeddiursaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 8, SHADOW_FORCE
+	db 8, SHADOW_FLARE
 	db 15, FURY_SWIPES
 	db 22, FAINT_ATTACK
 	db 29, REST
@@ -3066,7 +3066,7 @@ UrsaringEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 1, FURY_SWIPES
 	db 8, SHADOW_BALL
 	db 15, FURY_SWIPES
@@ -3076,9 +3076,9 @@ UrsaringEvosAttacks:
 	db 49, SNORE
 	db 59, THRASH
 	db 69, GILDED_SLASH
-	db 79, DRAGON_SMASH
+	db 79, ELDINS_WRATH
 	db 89, SKY_UPPERCUT
-	db 99, SHADOW_FORCE
+	db 99, SHADOW_FLARE
 	db 0 ; no more level-up moves
 
 SlugmaEvosAttacks:
@@ -3140,7 +3140,7 @@ CorsolaEvosAttacks:
 	db 7, HARDEN
 	db 13, BUBBLE
 	db 19, RECOVER
-	db 25, WATER_PULSE
+	db 25, NAYRUS_PSALM
 	db 31, SPIKE_CANNON
 	db 37, MIRROR_COAT
 	db 43, ANCIENTPOWER
@@ -3152,8 +3152,8 @@ RemoraidEvosAttacks:
 	db 1, WATER_GUN
 	db 11, LOCK_ON
 	db 22, PSYBEAM
-	db 22, AURORA_BEAM
-	db 22, WATER_PULSE
+	db 22, JABUS_FROST
+	db 22, NAYRUS_PSALM
 	db 33, FOCUS_ENERGY
 	db 44, ICE_BEAM
 	db 55, HYPER_BEAM
@@ -3164,8 +3164,8 @@ OctilleryEvosAttacks:
 	db 1, WATER_GUN
 	db 11, NASTY_PLOT
 	db 22, PSYBEAM
-	db 22, AURORA_BEAM
-	db 22, WATER_PULSE
+	db 22, JABUS_FROST
+	db 22, NAYRUS_PSALM
 	db 25, OCTAZOOKA
 	db 38, FOCUS_ENERGY
 	db 54, ICE_BEAM
@@ -3182,7 +3182,7 @@ MantineEvosAttacks:
 	db 1, TACKLE
 	db 1, BUBBLE
 	db 10, SUPERSONIC
-	db 18, WATER_PULSE
+	db 18, NAYRUS_PSALM
 	db 25, TAKE_DOWN
 	db 32, AGILITY
 	db 40, WING_ATTACK
@@ -3192,7 +3192,7 @@ MantineEvosAttacks:
 SkarmoryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, LEER
-	db 1, AERIAL_ACE
+	db 1, FARORES_WIND
 	db 13, SAND_ATTACK
 	db 19, SWIFT
 	db 25, AGILITY
@@ -3235,7 +3235,7 @@ KingdraEvosAttacks:
 	db 15, LEER
 	db 22, WATER_GUN
 	db 25, DRAGONBREATH
-	db 29, DRAGON_SMASH
+	db 29, ELDINS_WRATH
 	db 40, AGILITY
 	db 45, OUTRAGE
 	db 51, HYDRO_PUMP
@@ -3320,9 +3320,9 @@ TyrogueEvosAttacks:
 	db 1, MIND_READER
 	db 1, RAPID_SPIN
 	db 1, GILDED_SLASH
-	db 1, AERIAL_ACE
-	db 1, DRAGON_SMASH
-	db 1, SHADOW_FORCE
+	db 1, FARORES_WIND
+	db 1, ELDINS_WRATH
+	db 1, SHADOW_FLARE
 	db 1, SKY_UPPERCUT
 	db 0 ; no more level-up moves
 
@@ -3354,7 +3354,7 @@ SmoochumEvosAttacks:
 	db EVOLVE_LEVEL, 30, JYNX
 	db 0 ; no more evolutions
 	db 1, POUND
-	db 1, SHADOW_FORCE
+	db 1, SHADOW_FLARE
 	db 9, SWEET_KISS
 	db 13, POWDER_SNOW
 	db 21, CONFUSION
@@ -3450,10 +3450,10 @@ SuicuneEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
 	db 1, LEER
-	db 11, WATER_PULSE
+	db 11, NAYRUS_PSALM
 	db 21, RAIN_DANCE
 	db 31, GUST
-	db 41, AURORA_BEAM
+	db 41, JABUS_FROST
 	db 51, MIST
 	db 61, MIRROR_COAT
 	db 71, HYDRO_PUMP
@@ -3555,6 +3555,6 @@ CelebiEvosAttacks:
 	db 60, SILVER_WIND
 	db 70, NASTY_PLOT
 	db 80, GILDED_SLASH
-	db 90, DRAGON_SMASH
-	db 100, SHADOW_FORCE
+	db 90, ELDINS_WRATH
+	db 100, SHADOW_FLARE
 	db 0 ; no more level-up moves

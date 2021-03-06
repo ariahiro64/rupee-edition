@@ -73,8 +73,8 @@ Route2HiddenMaxEther:
 Route2HiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_ROUTE_2_HIDDEN_FULL_HEAL
 
-Route2HiddenFullRestore:
-	hiddenitem FULL_RESTORE, EVENT_ROUTE_2_HIDDEN_FULL_RESTORE
+Route2HiddenBluePotion:
+	hiddenitem BLUE_POTION, EVENT_ROUTE_2_HIDDEN_BLUE_POTION
 
 Route2HiddenRevive:
 	hiddenitem FAIRY, EVENT_ROUTE_2_HIDDEN_FAIRY
@@ -161,7 +161,7 @@ Route2_MapEvents:
 	bg_event 11,  9, BGEVENT_READ, Route2DiglettsCaveSign
 	bg_event  7, 23, BGEVENT_ITEM, Route2HiddenMaxEther
 	bg_event  4, 14, BGEVENT_ITEM, Route2HiddenFullHeal
-	bg_event  4, 27, BGEVENT_ITEM, Route2HiddenFullRestore
+	bg_event  4, 27, BGEVENT_ITEM, Route2HiddenBluePotion
 	bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive
 
 	db 8 ; object events

@@ -4,7 +4,7 @@ RainDanceMoves:
 	db WATER_GUN
 	db HYDRO_PUMP
 	db SURF
-	db WATER_PULSE
+	db NAYRUS_PSALM
 	db THUNDER
 	db WATERFALL
 	db CLAMP

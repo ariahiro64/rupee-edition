@@ -268,7 +268,7 @@ AI_TryItem:
 	ret
 
 AI_Items:
-	dbw FULL_RESTORE, .FullRestore
+	dbw BLUE_POTION, .BluePotion
 	dbw MAX_POTION,   .MaxPotion
 	dbw HYPER_POTION, .HyperPotion
 	dbw SUPER_POTION, .SuperPotion
@@ -321,17 +321,17 @@ AI_Items:
 	jp z, .DontUse
 	jp .Use
 
-.FullRestore:
+.BluePotion:
 	call .HealItem
-	jp nc, .UseFullRestore
+	jp nc, .UseBluePotion
 	ld a, [bc]
 	bit CONTEXT_USE_F, a
 	jp z, .DontUse
 	call .Status
 	jp c, .DontUse
 
-.UseFullRestore:
-	call EnemyUsedFullRestore
+.UseBluePotion:
+	call EnemyUsedBluePotion
 	jp .Use
 
 .MaxPotion:
@@ -542,18 +542,18 @@ EnemyUsedFullHeal:
 EnemyUsedMaxPotion:
 	ld a, MAX_POTION
 	ld [wCurEnemyItem], a
-	jr FullRestoreContinue
+	jr BluePotionContinue
 
-EnemyUsedFullRestore:
+EnemyUsedBluePotion:
 	call AI_HealStatus
-	ld a, FULL_RESTORE
+	ld a, BLUE_POTION
 	ld [wCurEnemyItem], a
 	ld hl, wEnemySubStatus3
 	res SUBSTATUS_CONFUSED, [hl]
 	xor a
 	ld [wEnemyConfuseCount], a
 
-FullRestoreContinue:
+BluePotionContinue:
 	ld de, wCurHPAnimOldHP
 	ld hl, wEnemyMonHP + 1
 	ld a, [hld]

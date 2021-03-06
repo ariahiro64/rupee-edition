@@ -14,8 +14,8 @@ TinTower8FNugget:
 TinTower8FMaxElixer:
 	itemball MAX_ELIXER
 
-TinTower8FFullRestore:
-	itemball FULL_RESTORE
+TinTower8FBluePotion:
+	itemball BLUE_POTION
 
 TinTower8F_MapEvents:
 	db 0, 0 ; filler
@@ -35,4 +35,4 @@ TinTower8F_MapEvents:
 	db 3 ; object events
 	object_event  7, 13, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TinTower8FNugget, EVENT_TIN_TOWER_8F_NUGGET
 	object_event 11,  6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TinTower8FMaxElixer, EVENT_TIN_TOWER_8F_MAX_ELIXER
-	object_event  3,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TinTower8FFullRestore, EVENT_TIN_TOWER_8F_FULL_RESTORE
+	object_event  3,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, TinTower8FBluePotion, EVENT_TIN_TOWER_8F_BLUE_POTION

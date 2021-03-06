@@ -61,10 +61,10 @@ BattleAnimations::
 	dw BattleAnim_IceBeam
 	dw BattleAnim_Blizzard
 	dw BattleAnim_Psybeam
-	dw BattleAnim_WaterPulse
-	dw BattleAnim_AuroraBeam
+	dw BattleAnim_NayrusPsalm
+	dw BattleAnim_JabusFrost
 	dw BattleAnim_HyperBeam
-	dw BattleAnim_AerialAce
+	dw BattleAnim_FaroresWind
 	dw BattleAnim_DrillPeck
 	dw BattleAnim_Submission
 	dw BattleAnim_LowKick
@@ -122,7 +122,7 @@ BattleAnimations::
 	dw BattleAnim_MirrorMove
 	dw BattleAnim_Selfdestruct
 	dw BattleAnim_EggBomb
-	dw BattleAnim_ShadowForce
+	dw BattleAnim_ShadowFlare
 	dw BattleAnim_Smog
 	dw BattleAnim_Sludge
 	dw BattleAnim_BoneClub
@@ -239,7 +239,7 @@ BattleAnimations::
 	dw BattleAnim_Moonlight
 	dw BattleAnim_HiddenPower
 	dw BattleAnim_CrossChop
-	dw BattleAnim_DragonSmash
+	dw BattleAnim_EldinsWrath
 	dw BattleAnim_RainDance
 	dw BattleAnim_SunnyDay
 	dw BattleAnim_Crunch
@@ -829,14 +829,14 @@ BattleAnim_GildedSlash:
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_sound 0, 0, SFX_RAGE
 	anim_call BattleAnim_TargetObj_1Row
-	anim_call BattleAnimSub_Metallic
+	anim_call BattleAnimSub_Gilded
 	anim_call BattleAnim_ShowMon_0
 	anim_1gfx ANIM_GFX_CUT
 	anim_resetobp0
 	anim_sound 0, 1, SFX_CUT
-	anim_obj ANIM_OBJ_37, 144, 48, $0
-	anim_obj ANIM_OBJ_37, 140, 44, $0
-	anim_obj ANIM_OBJ_37, 136, 40, $0
+	anim_obj ANIM_OBJ_GILDED_EDGES, 144, 48, $0
+	anim_obj ANIM_OBJ_GILDED_EDGES, 140, 44, $0
+	anim_obj ANIM_OBJ_GILDED_EDGES, 136, 40, $0
 	anim_wait 32
 	anim_ret
 
@@ -1046,9 +1046,9 @@ BattleAnim_Bubble:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_WaterPulse:
-	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_PSYCHIC
-	anim_bgeffect ANIM_BG_WHIRLPOOL, $0, $0, $0
+BattleAnim_NayrusPsalm:
+	anim_2gfx ANIM_GFX_BUBBLE, ANIM_GFX_NOISE
+	anim_bgeffect ANIM_BG_SURF, $0, $0, $0
 	anim_sound 6, 2, SFX_BUBBLEBEAM
 	anim_wait 64
 .loop
@@ -1057,7 +1057,7 @@ BattleAnim_WaterPulse:
 	anim_wait 6
 	anim_loop 3, .loop
 	anim_wait 6
-	anim_incbgeffect ANIM_BG_WHIRLPOOL
+	anim_incbgeffect ANIM_BG_SURF
 	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
 .loop2
 	anim_sound 0, 1, SFX_LICK
@@ -1489,15 +1489,31 @@ BattleAnim_HyperBeam:
 	anim_wait 48
 	anim_ret
 
-BattleAnim_AuroraBeam:
-	anim_1gfx ANIM_GFX_BEAM
+BattleAnim_JabusFrost:
+	anim_2gfx ANIM_GFX_ICE, ANIM_GFX_AEROBLAST
+	anim_bgp $1b
+	anim_bgeffect ANIM_BG_1F, $50, $4, $10
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-	anim_wait 64
-	anim_call BattleAnimSub_Beam
-	anim_wait 48
-	anim_incobj 5
-	anim_wait 64
+.loop
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_BLIZZARD, 64, 88, $63
+	anim_bgeffect ANIM_BG_1F, $50, $4, $10
+	anim_wait 2
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_AEROBLAST, 64, 80, $64
+	anim_wait 2
+	anim_sound 6, 2, SFX_SHINE
+	anim_obj ANIM_OBJ_BLUE_STATIC, 64, 96, $63
+	anim_wait 2
+	anim_loop 3, .loop
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_wait 32
+	anim_obj ANIM_OBJ_ICE_BUILDUP, 136, 74, $10
+	anim_wait 128
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 8
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 24
 	anim_ret
 
 BattleAnim_Vicegrip:
@@ -1705,6 +1721,31 @@ BattleAnim_EggBomb:
 	anim_sound 0, 1, SFX_EGG_BOMB
 	anim_obj ANIM_OBJ_18, 136, 72, $0
 	anim_wait 24
+	anim_ret
+
+BattleAnim_ShadowFlare:
+	anim_1gfx ANIM_GFX_FIRE
+	anim_bgeffect ANIM_BG_1F, $0, $1, $80
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+.loop
+	anim_sound 0, 0, SFX_EMBER
+	anim_obj ANIM_OBJ_SHADOW_FLARE, 48, 104, $0
+	anim_wait 8
+	anim_loop 8, .loop
+	anim_wait 96
+	anim_call BattleAnim_TargetObj_1Row
+	anim_bgeffect ANIM_BG_1F, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_EMBER
+	anim_obj ANIM_OBJ_BLUE_FLARE, 136, 48, $1
+	anim_obj ANIM_OBJ_BLUE_FLARE, 136, 48, $4
+	anim_obj ANIM_OBJ_BLUE_FLARE, 136, 48, $5
+	anim_wait 8
+	anim_incbgeffect ANIM_BG_1F
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_wait 4
+	anim_incobj 9
+	anim_wait 8
 	anim_ret
 
 BattleAnim_Softboiled:
@@ -2479,8 +2520,8 @@ BattleAnim_Kinesis:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_AerialAce:
-	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_CUT
+BattleAnim_FaroresWind:
+	anim_3gfx ANIM_GFX_WIND, ANIM_GFX_CUT, ANIM_GFX_MISC
 	anim_sound 0, 0, SFX_MENU
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
 	anim_obj ANIM_OBJ_SPEED_LINE, 24, 88, $2
@@ -2497,6 +2538,10 @@ BattleAnim_AerialAce:
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $2
 	anim_obj ANIM_OBJ_39, 120, 68, $0
 	anim_wait 8
+	anim_obj ANIM_OBJ_3A, 44, 104, $20
+	anim_sound 0, 0, SFX_BATON_PASS
+	anim_call BattleAnim_ReturnMon.anim
+	anim_wait 64
 	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
 	anim_wait 24
 	anim_ret
@@ -2639,27 +2684,6 @@ BattleAnim_NightShade:
 	anim_wait 96
 	anim_incbgeffect ANIM_BG_NIGHT_SHADE
 	anim_call BattleAnim_ShowMon_1
-	anim_ret
-
-BattleAnim_ShadowForce:
-	anim_if_param_equal $1, .turn1
-	anim_if_param_equal $2, .miss
-	anim_1gfx ANIM_GFX_HIT
-	anim_bgeffect ANIM_BG_19, $0, $1, $40
-	anim_sound 0, 1, SFX_WING_ATTACK
-	anim_obj ANIM_OBJ_01, 136, 56, $0
-	anim_wait 32
-.miss:
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
-	anim_wait 32
-	anim_ret
-
-.turn1:
-	anim_1gfx ANIM_GFX_SPEED
-	anim_bgeffect ANIM_BG_19, $0, $1, $40
-	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0
-	anim_call BattleAnimSub_WarpAway
-	anim_wait 64
 	anim_ret
 
 BattleAnim_TriAttack:
@@ -4386,7 +4410,7 @@ BattleAnim_CrossChop:
 	anim_wait 16
 	anim_ret
 
-BattleAnim_DragonSmash:
+BattleAnim_EldinsWrath:
 	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_FIRE
 	anim_call BattleAnim_TargetObj_1Row
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $10
@@ -4396,7 +4420,7 @@ BattleAnim_DragonSmash:
 	anim_obj ANIM_OBJ_00, 128, 48, $0
 	anim_wait 6
 	anim_sound 0, 1, SFX_EMBER
-	anim_obj ANIM_OBJ_00, 144, 48, $0
+	anim_obj ANIM_OBJ_SACRED_FIRE, 144, 48, $0
 	anim_wait 3
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
@@ -4741,6 +4765,17 @@ BattleAnimSub_Metallic:
 	anim_obj ANIM_OBJ_HARDEN, 48, 84, $0
 	anim_wait 32
 	anim_obj ANIM_OBJ_HARDEN, 48, 84, $0
+	anim_wait 64
+	anim_incbgeffect ANIM_BG_17
+	anim_ret
+
+BattleAnimSub_Gilded:
+	anim_sound 0, 0, SFX_SHINE
+	anim_bgeffect ANIM_BG_17, $0, $1, $40
+	anim_wait 8
+	anim_obj ANIM_OBJ_GILDED_EDGES, 48, 84, $0
+	anim_wait 32
+	anim_obj ANIM_OBJ_GILDED_EDGES, 48, 84, $0
 	anim_wait 64
 	anim_incbgeffect ANIM_BG_17
 	anim_ret
